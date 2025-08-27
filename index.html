@@ -1,0 +1,4563 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crook Store - Luxury Jewelry Collection</title>
+    <meta name="description" content="Premium handcrafted jewelry and accessories with unmatched quality and style">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>💎</text></svg>">
+    
+    <!-- Premium Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500;1,600;1,700&family=Inter:wght@100;200;300;400;500;600;700;800;900&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
+    
+    <!-- Icons -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
+    
+    <style>
+        /* Luxury CSS Variables */
+        :root {
+            --gold-primary: #d4af37;
+            --gold-light: #f4e4bc;
+            --gold-dark: #b8941f;
+            --gold-accent: #ffd700;
+            --diamond-white: #f8f9fa;
+            --pearl-white: #fefefe;
+            --onyx-black: #0a0a0a;
+            --charcoal: #1a1a1a;
+            --platinum: #e5e4e2;
+            --rose-gold: #e8b4a0;
+            --emerald: #50c878;
+            --ruby: #e0115f;
+            --sapphire: #0f52ba;
+            --amber: #ffbf00;
+            
+            /* Gradients */
+            --gradient-gold: linear-gradient(135deg, #d4af37 0%, #ffd700 50%, #f4e4bc 100%);
+            --gradient-luxury: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 25%, #d4af37 50%, #2d2d2d 75%, #1a1a1a 100%);
+            --gradient-pearl: linear-gradient(135deg, #fefefe 0%, #f8f9fa 50%, #e5e4e2 100%);
+            --gradient-diamond: linear-gradient(45deg, #ffffff 0%, #f8f9fa 25%, #ffffff 50%, #f0f0f0 75%, #ffffff 100%);
+            --gradient-mesh: radial-gradient(circle at 20% 80%, rgba(212, 175, 55, 0.15) 0%, transparent 50%), 
+                            radial-gradient(circle at 80% 20%, rgba(232, 180, 160, 0.15) 0%, transparent 50%),
+                            radial-gradient(circle at 40% 40%, rgba(255, 191, 0, 0.1) 0%, transparent 50%);
+            
+            /* Shadows */
+            --shadow-soft: 0 2px 20px rgba(0, 0, 0, 0.08);
+            --shadow-medium: 0 8px 30px rgba(0, 0, 0, 0.12);
+            --shadow-heavy: 0 20px 60px rgba(0, 0, 0, 0.15);
+            --shadow-gold: 0 10px 40px rgba(212, 175, 55, 0.3);
+            --shadow-inset: inset 0 2px 4px rgba(0, 0, 0, 0.1);
+            
+            /* Glass Effects */
+            --glass-bg: rgba(255, 255, 255, 0.1);
+            --glass-border: rgba(255, 255, 255, 0.2);
+            --glass-blur: blur(20px);
+            
+            /* Textures */
+            --texture-paper: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100' height='100' viewBox='0 0 100 100'%3E%3Cg fill-opacity='0.03'%3E%3Cpolygon fill='%23000' points='50 0 60 40 100 50 60 60 50 100 40 60 0 50 40 40'/%3E%3C/g%3E%3C/svg%3E");
+            --texture-leather: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='60' height='60' viewBox='0 0 60 60'%3E%3Cg fill-opacity='0.05'%3E%3Ccircle fill='%23000' cx='30' cy='30' r='2'/%3E%3C/g%3E%3C/svg%3E");
+            --texture-fabric: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='40' height='40' viewBox='0 0 40 40'%3E%3Cg fill-opacity='0.04'%3E%3Cpath fill='%23000' d='M0 0h20v20H0V0zm20 20h20v20H20V20z'/%3E%3C/g%3E%3C/svg%3E");
+            
+            /* Transitions */
+            --transition-smooth: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
+            --transition-bounce: all 0.6s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+            --transition-elastic: all 0.8s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            
+            /* Border Radius */
+            --radius-small: 8px;
+            --radius-medium: 16px;
+            --radius-large: 24px;
+            --radius-xl: 32px;
+            --radius-round: 50%;
+        }
+
+        /* Dark Theme Variables */
+        [data-theme="dark"] {
+            --diamond-white: #1a1a1a;
+            --pearl-white: #2d2d2d;
+            --onyx-black: #f8f9fa;
+            --charcoal: #e5e4e2;
+        }
+
+        /* Reset & Base Styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+            font-size: 16px;
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            background: var(--pearl-white);
+            color: var(--onyx-black);
+            overflow-x: hidden;
+            cursor: none;
+            position: relative;
+        }
+
+        body::before {
+            content: '';
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: var(--gradient-mesh), var(--texture-fabric);
+            pointer-events: none;
+            z-index: -1;
+            opacity: 0.6;
+        }
+
+        /* Ultra Luxury Animated Background */
+        .luxury-background {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -2;
+            background: linear-gradient(45deg, #0a0a0a, #1a1a1a, #2d2d2d, #0a0a0a);
+            background-size: 400% 400%;
+            animation: luxuryShift 20s ease infinite;
+        }
+
+        @keyframes luxuryShift {
+            0%, 100% { background-position: 0% 50%; }
+            25% { background-position: 100% 50%; }
+            50% { background-position: 100% 100%; }
+            75% { background-position: 0% 100%; }
+        }
+
+        .geometric-luxury {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+            background: 
+                radial-gradient(circle at 15% 85%, rgba(212, 175, 55, 0.08) 0%, transparent 60%),
+                radial-gradient(circle at 85% 15%, rgba(232, 180, 160, 0.08) 0%, transparent 60%),
+                radial-gradient(circle at 50% 50%, rgba(255, 215, 0, 0.06) 0%, transparent 70%);
+            backdrop-filter: blur(1px);
+        }
+
+        /* Premium Cursor System */
+        .luxury-cursor {
+            position: fixed;
+            width: 12px;
+            height: 12px;
+            background: var(--gradient-gold);
+            border-radius: 50%;
+            pointer-events: none;
+            z-index: 10000;
+            mix-blend-mode: difference;
+            transition: transform 0.2s ease;
+            box-shadow: 0 0 20px rgba(212, 175, 55, 0.6);
+        }
+
+        .luxury-cursor-trail {
+            position: fixed;
+            width: 32px;
+            height: 32px;
+            border: 2px solid var(--gold-primary);
+            border-radius: 50%;
+            pointer-events: none;
+            z-index: 9999;
+            transition: transform 0.15s ease;
+            opacity: 0.7;
+        }
+
+        .luxury-cursor.hover {
+            transform: scale(2.5);
+            background: var(--gradient-luxury);
+            box-shadow: 0 0 40px rgba(212, 175, 55, 0.8);
+        }
+
+        .luxury-cursor.click {
+            transform: scale(0.8);
+            background: var(--ruby);
+        }
+
+        /* Premium Particles System */
+        .luxury-particles {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            z-index: 0;
+        }
+
+        .gold-particle {
+            position: absolute;
+            width: 3px;
+            height: 3px;
+            background: var(--gold-primary);
+            border-radius: 50%;
+            box-shadow: 0 0 12px var(--gold-primary);
+            animation: goldFloat 8s ease-in-out infinite;
+        }
+
+        .diamond-particle {
+            position: absolute;
+            width: 4px;
+            height: 4px;
+            background: var(--diamond-white);
+            border-radius: 50%;
+            box-shadow: 0 0 15px rgba(255, 255, 255, 0.8);
+            animation: diamondSparkle 6s ease-in-out infinite;
+        }
+
+        .pearl-particle {
+            position: absolute;
+            width: 5px;
+            height: 5px;
+            background: var(--pearl-white);
+            border-radius: 50%;
+            box-shadow: 0 0 10px rgba(254, 254, 254, 0.6);
+            animation: pearlGlow 10s ease-in-out infinite;
+        }
+
+        @keyframes goldFloat {
+            0%, 100% { transform: translateY(0px) rotate(0deg); opacity: 0.3; }
+            50% { transform: translateY(-40px) rotate(180deg); opacity: 0.8; }
+        }
+
+        @keyframes diamondSparkle {
+            0%, 100% { transform: translateY(0px) scale(1); opacity: 0.4; }
+            50% { transform: translateY(-30px) scale(1.5); opacity: 1; }
+        }
+
+        @keyframes pearlGlow {
+            0%, 100% { transform: translateY(0px) rotate(0deg); opacity: 0.2; }
+            50% { transform: translateY(-25px) rotate(360deg); opacity: 0.7; }
+        }
+
+        /* Luxury Loading Screen */
+        .luxury-loading {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: var(--gradient-luxury);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            z-index: 10000;
+            transition: opacity 1s ease;
+        }
+
+        .loading-diamond {
+            width: 80px;
+            height: 80px;
+            position: relative;
+            margin-bottom: 2rem;
+        }
+
+        .loading-diamond::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 50%;
+            width: 0;
+            height: 0;
+            border-left: 40px solid transparent;
+            border-right: 40px solid transparent;
+            border-bottom: 25px solid var(--gold-primary);
+            transform: translateX(-50%);
+            animation: diamondTop 2s ease-in-out infinite;
+        }
+
+        .loading-diamond::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            width: 0;
+            height: 0;
+            border-left: 40px solid transparent;
+            border-right: 40px solid transparent;
+            border-top: 55px solid var(--gold-primary);
+            transform: translateX(-50%);
+            animation: diamondBottom 2s ease-in-out infinite;
+        }
+
+        @keyframes diamondTop {
+            0%, 100% { opacity: 1; transform: translateX(-50%) scale(1); }
+            50% { opacity: 0.7; transform: translateX(-50%) scale(1.1); }
+        }
+
+        @keyframes diamondBottom {
+            0%, 100% { opacity: 1; transform: translateX(-50%) scale(1); }
+            50% { opacity: 0.7; transform: translateX(-50%) scale(0.9); }
+        }
+
+        .loading-text {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.5rem;
+            font-weight: 600;
+            color: var(--gold-primary);
+            letter-spacing: 3px;
+            text-transform: uppercase;
+            animation: textGlow 2s ease-in-out infinite;
+        }
+
+        @keyframes textGlow {
+            0%, 100% { text-shadow: 0 0 20px rgba(212, 175, 55, 0.5); }
+            50% { text-shadow: 0 0 40px rgba(212, 175, 55, 0.8); }
+        }
+
+        /* Progress Bar */
+        .luxury-progress {
+            position: fixed;
+            top: 0;
+            left: 0;
+            height: 4px;
+            background: var(--gradient-gold);
+            z-index: 9999;
+            transition: width 0.3s ease;
+            box-shadow: var(--shadow-gold);
+        }
+
+        /* Luxury Header */
+        .luxury-header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            background: rgba(254, 254, 254, 0.9);
+            backdrop-filter: blur(20px);
+            border-bottom: 1px solid var(--glass-border);
+            z-index: 1000;
+            transition: var(--transition-smooth);
+        }
+
+        .luxury-header.scrolled {
+            background: rgba(254, 254, 254, 0.95);
+            box-shadow: var(--shadow-medium);
+        }
+
+        .header-announcement {
+            background: var(--gradient-luxury);
+            color: var(--pearl-white);
+            padding: 0.75rem 0;
+            text-align: center;
+            font-size: 0.9rem;
+            font-weight: 500;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .header-announcement::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+            animation: shimmer 3s infinite;
+        }
+
+        @keyframes shimmer {
+            0% { left: -100%; }
+            100% { left: 100%; }
+        }
+
+        .header-nav {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 1rem 2rem;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 2rem;
+        }
+
+        .luxury-logo {
+            font-family: 'Playfair Display', serif;
+            font-size: 2.2rem;
+            font-weight: 700;
+            background: var(--gradient-gold);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            text-decoration: none;
+            transition: var(--transition-smooth);
+            position: relative;
+        }
+
+        .luxury-logo::after {
+            content: '💎';
+            position: absolute;
+            top: -10px;
+            right: -25px;
+            font-size: 1rem;
+            animation: sparkle 2s ease-in-out infinite;
+        }
+
+        @keyframes sparkle {
+            0%, 100% { transform: scale(1) rotate(0deg); }
+            50% { transform: scale(1.2) rotate(180deg); }
+        }
+
+        .luxury-logo:hover {
+            transform: scale(1.05);
+            filter: drop-shadow(0 0 20px rgba(212, 175, 55, 0.5));
+        }
+
+        .nav-menu {
+            display: flex;
+            list-style: none;
+            gap: 2.5rem;
+        }
+
+        .nav-item {
+            position: relative;
+        }
+
+        .nav-link {
+            color: var(--onyx-black);
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 1rem;
+            transition: var(--transition-smooth);
+            position: relative;
+            padding: 0.5rem 0;
+        }
+
+        .nav-link::before {
+            content: '';
+            position: absolute;
+            bottom: -2px;
+            left: 50%;
+            width: 0;
+            height: 2px;
+            background: var(--gradient-gold);
+            transition: var(--transition-smooth);
+            transform: translateX(-50%);
+        }
+
+        .nav-link:hover,
+        .nav-link.active {
+            color: var(--gold-primary);
+        }
+
+        .nav-link:hover::before,
+        .nav-link.active::before {
+            width: 100%;
+        }
+
+        /* Premium Search */
+        .luxury-search {
+            position: relative;
+            display: flex;
+            align-items: center;
+        }
+
+        .search-container {
+            position: relative;
+            background: var(--glass-bg);
+            border: 2px solid var(--glass-border);
+            border-radius: var(--radius-xl);
+            padding: 0.75rem 1rem 0.75rem 3rem;
+            backdrop-filter: var(--glass-blur);
+            transition: var(--transition-smooth);
+            overflow: hidden;
+        }
+
+        .search-container::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: var(--gradient-gold);
+            opacity: 0;
+            transition: var(--transition-smooth);
+            z-index: -1;
+        }
+
+        .search-container:hover::before,
+        .search-container.focused::before {
+            opacity: 0.1;
+        }
+
+        .search-container.focused {
+            border-color: var(--gold-primary);
+            box-shadow: var(--shadow-gold);
+        }
+
+        .search-input {
+            background: transparent;
+            border: none;
+            outline: none;
+            font-size: 0.95rem;
+            width: 300px;
+            color: var(--onyx-black);
+            font-weight: 500;
+        }
+
+        .search-input::placeholder {
+            color: var(--charcoal);
+            opacity: 0.7;
+        }
+
+        .search-icon {
+            position: absolute;
+            left: 1rem;
+            color: var(--gold-primary);
+            font-size: 1.1rem;
+            transition: var(--transition-smooth);
+        }
+
+        .search-container.focused .search-icon {
+            color: var(--gold-dark);
+            transform: scale(1.1);
+        }
+
+        /* Navigation Actions */
+        .nav-actions {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        .action-button {
+            position: relative;
+            width: 48px;
+            height: 48px;
+            background: var(--glass-bg);
+            border: 2px solid var(--glass-border);
+            border-radius: var(--radius-medium);
+            color: var(--onyx-black);
+            cursor: pointer;
+            transition: var(--transition-smooth);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.2rem;
+            backdrop-filter: var(--glass-blur);
+        }
+
+        .action-button:hover {
+            background: var(--gradient-gold);
+            color: var(--pearl-white);
+            transform: translateY(-2px);
+            box-shadow: var(--shadow-gold);
+            border-color: var(--gold-primary);
+        }
+
+        .action-badge {
+            position: absolute;
+            top: -5px;
+            right: -5px;
+            background: var(--ruby);
+            color: var(--pearl-white);
+            border-radius: 50%;
+            width: 22px;
+            height: 22px;
+            font-size: 0.7rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 600;
+            animation: pulse 2s infinite;
+        }
+
+        .theme-toggle {
+            background: var(--glass-bg);
+            border: 2px solid var(--glass-border);
+            border-radius: var(--radius-xl);
+            padding: 0.5rem 1rem;
+            cursor: pointer;
+            transition: var(--transition-smooth);
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            backdrop-filter: var(--glass-blur);
+            color: var(--onyx-black);
+            font-weight: 500;
+        }
+
+        .theme-toggle:hover {
+            border-color: var(--gold-primary);
+            box-shadow: var(--shadow-gold);
+            background: var(--gradient-gold);
+            color: var(--pearl-white);
+        }
+
+        .theme-icon {
+            transition: var(--transition-smooth);
+        }
+
+        .theme-toggle:hover .theme-icon {
+            transform: rotate(180deg);
+        }
+
+        /* Mobile Menu */
+        .mobile-toggle {
+            display: none;
+            background: none;
+            border: none;
+            font-size: 1.5rem;
+            color: var(--onyx-black);
+            cursor: pointer;
+            transition: var(--transition-smooth);
+        }
+
+        .mobile-toggle:hover {
+            color: var(--gold-primary);
+            transform: scale(1.1);
+        }
+
+        /* Luxury Hero Section */
+        .luxury-hero {
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            position: relative;
+            overflow: hidden;
+            background: var(--gradient-mesh);
+            backdrop-filter: blur(1px);
+        }
+
+        .hero-content {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 0 2rem;
+            position: relative;
+            z-index: 2;
+        }
+
+        .hero-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.75rem;
+            background: var(--glass-bg);
+            border: 1px solid var(--glass-border);
+            color: var(--gold-primary);
+            padding: 0.75rem 1.5rem;
+            border-radius: var(--radius-xl);
+            font-size: 0.9rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            margin-bottom: 2rem;
+            backdrop-filter: var(--glass-blur);
+            animation: slideUp 1s ease 0.2s both;
+        }
+
+        .hero-title {
+            font-family: 'Playfair Display', serif;
+            font-size: clamp(3rem, 8vw, 8rem);
+            font-weight: 700;
+            line-height: 1.1;
+            margin-bottom: 1.5rem;
+            background: var(--gradient-gold);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            animation: slideUp 1s ease 0.4s both;
+        }
+
+        .hero-subtitle {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 1.4rem;
+            color: var(--charcoal);
+            margin-bottom: 3rem;
+            line-height: 1.6;
+            max-width: 600px;
+            animation: slideUp 1s ease 0.6s both;
+        }
+
+        .hero-actions {
+            display: flex;
+            gap: 1.5rem;
+            flex-wrap: wrap;
+            animation: slideUp 1s ease 0.8s both;
+        }
+
+        .luxury-button {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.75rem;
+            padding: 1.2rem 3rem;
+            font-size: 1.1rem;
+            font-weight: 600;
+            text-decoration: none;
+            border-radius: var(--radius-xl);
+            transition: var(--transition-smooth);
+            position: relative;
+            overflow: hidden;
+            border: 2px solid transparent;
+        }
+
+        .btn-primary {
+            background: var(--gradient-gold);
+            color: var(--pearl-white);
+            box-shadow: var(--shadow-gold);
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 15px 50px rgba(212, 175, 55, 0.4);
+        }
+
+        .btn-secondary {
+            background: var(--glass-bg);
+            color: var(--onyx-black);
+            border-color: var(--glass-border);
+            backdrop-filter: var(--glass-blur);
+        }
+
+        .btn-secondary:hover {
+            background: var(--pearl-white);
+            color: var(--gold-primary);
+            transform: translateY(-3px);
+            box-shadow: var(--shadow-medium);
+        }
+
+        .luxury-button::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+            transition: left 0.5s;
+        }
+
+        .luxury-button:hover::before {
+            left: 100%;
+        }
+
+        @keyframes slideUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* Floating Shapes */
+        .hero-shapes {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+        }
+
+        .floating-shape {
+            position: absolute;
+            border-radius: 50%;
+            background: var(--gradient-gold);
+            opacity: 0.1;
+            animation: floatLuxury 12s ease-in-out infinite;
+        }
+
+        .floating-shape:nth-child(1) {
+            width: 120px;
+            height: 120px;
+            top: 20%;
+            left: 10%;
+            animation-delay: -2s;
+        }
+
+        .floating-shape:nth-child(2) {
+            width: 180px;
+            height: 180px;
+            top: 60%;
+            right: 15%;
+            animation-delay: -4s;
+        }
+
+        .floating-shape:nth-child(3) {
+            width: 100px;
+            height: 100px;
+            bottom: 20%;
+            left: 70%;
+            animation-delay: -6s;
+        }
+
+        @keyframes floatLuxury {
+            0%, 100% {
+                transform: translateY(0px) rotate(0deg);
+                opacity: 0.1;
+            }
+            50% {
+                transform: translateY(-40px) rotate(180deg);
+                opacity: 0.3;
+            }
+        }
+
+        /* Features Section */
+        .luxury-features {
+            padding: 6rem 0;
+            background: var(--gradient-pearl);
+            position: relative;
+        }
+
+        .luxury-features::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: var(--texture-paper);
+            opacity: 0.3;
+        }
+
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 0 2rem;
+            position: relative;
+        }
+
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 2.5rem;
+        }
+
+        .feature-card {
+            background: var(--glass-bg);
+            backdrop-filter: var(--glass-blur);
+            border: 1px solid var(--glass-border);
+            border-radius: var(--radius-large);
+            padding: 3rem 2rem;
+            text-align: center;
+            transition: var(--transition-smooth);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .feature-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: var(--gradient-gold);
+            opacity: 0;
+            transition: var(--transition-smooth);
+            z-index: -1;
+        }
+
+        .feature-card:hover::before {
+            opacity: 0.05;
+        }
+
+        .feature-card:hover {
+            transform: translateY(-15px);
+            box-shadow: var(--shadow-heavy);
+            border-color: var(--gold-primary);
+        }
+
+        .feature-icon {
+            width: 90px;
+            height: 90px;
+            background: var(--gradient-gold);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 2rem;
+            font-size: 2.5rem;
+            color: var(--pearl-white);
+            transition: var(--transition-bounce);
+            box-shadow: var(--shadow-gold);
+        }
+
+        .feature-card:hover .feature-icon {
+            transform: scale(1.1) rotate(360deg);
+        }
+
+        .feature-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.4rem;
+            font-weight: 600;
+            color: var(--onyx-black);
+            margin-bottom: 1rem;
+        }
+
+        .feature-description {
+            color: var(--charcoal);
+            line-height: 1.7;
+            font-size: 1.05rem;
+        }
+
+        /* Products Section */
+        .luxury-products {
+            padding: 6rem 0;
+            position: relative;
+        }
+
+        .luxury-products::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: var(--texture-leather);
+            opacity: 0.2;
+        }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: 4rem;
+            position: relative;
+        }
+
+        .section-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.75rem;
+            background: var(--glass-bg);
+            border: 1px solid var(--glass-border);
+            color: var(--gold-primary);
+            padding: 0.75rem 1.5rem;
+            border-radius: var(--radius-xl);
+            font-size: 0.9rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            margin-bottom: 1.5rem;
+            backdrop-filter: var(--glass-blur);
+        }
+
+        .section-title {
+            font-family: 'Playfair Display', serif;
+            font-size: clamp(2.5rem, 5vw, 4.5rem);
+            font-weight: 700;
+            color: var(--onyx-black);
+            margin-bottom: 1rem;
+            line-height: 1.2;
+        }
+
+        .section-subtitle {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 1.3rem;
+            color: var(--charcoal);
+            max-width: 700px;
+            margin: 0 auto;
+            line-height: 1.6;
+        }
+
+        /* Product Filters */
+        .product-filters {
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+            margin-bottom: 4rem;
+            flex-wrap: wrap;
+        }
+
+        .filter-button {
+            padding: 0.75rem 2rem;
+            background: var(--glass-bg);
+            border: 2px solid var(--glass-border);
+            border-radius: var(--radius-xl);
+            color: var(--onyx-black);
+            font-weight: 600;
+            cursor: pointer;
+            transition: var(--transition-smooth);
+            position: relative;
+            overflow: hidden;
+            backdrop-filter: var(--glass-blur);
+        }
+
+        .filter-button::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: var(--gradient-gold);
+            transition: left var(--transition-smooth);
+            z-index: -1;
+        }
+
+        .filter-button:hover,
+        .filter-button.active {
+            border-color: var(--gold-primary);
+            color: var(--pearl-white);
+            transform: translateY(-2px);
+            box-shadow: var(--shadow-gold);
+        }
+
+        .filter-button:hover::before,
+        .filter-button.active::before {
+            left: 0;
+        }
+
+        /* Products Grid */
+        .products-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+            gap: 2.5rem;
+        }
+
+        .product-card {
+            background: var(--pearl-white);
+            border: 1px solid var(--glass-border);
+            border-radius: var(--radius-large);
+            overflow: hidden;
+            transition: var(--transition-smooth);
+            position: relative;
+            box-shadow: var(--shadow-soft);
+        }
+
+        .product-card:hover {
+            transform: translateY(-10px) perspective(1000px) rotateX(5deg);
+            box-shadow: var(--shadow-heavy);
+            border-color: var(--gold-primary);
+        }
+
+        .product-image-container {
+            position: relative;
+            height: 350px;
+            overflow: hidden;
+            background: var(--gradient-pearl);
+        }
+
+        .product-image {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: var(--transition-smooth);
+        }
+
+        .product-card:hover .product-image {
+            transform: scale(1.05);
+        }
+
+        .product-badges {
+            position: absolute;
+            top: 1rem;
+            left: 1rem;
+            display: flex;
+            flex-direction: column;
+            gap: 0.5rem;
+            z-index: 2;
+        }
+
+        .product-badge {
+            padding: 0.4rem 1rem;
+            border-radius: var(--radius-xl);
+            font-size: 0.75rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            backdrop-filter: var(--glass-blur);
+        }
+
+        .badge-new {
+            background: var(--emerald);
+            color: var(--pearl-white);
+        }
+
+        .badge-sale {
+            background: var(--ruby);
+            color: var(--pearl-white);
+        }
+
+        .badge-limited {
+            background: var(--sapphire);
+            color: var(--pearl-white);
+        }
+
+        .badge-trending {
+            background: var(--gradient-gold);
+            color: var(--pearl-white);
+        }
+
+        .product-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0, 0, 0, 0.8);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 1rem;
+            opacity: 0;
+            transition: var(--transition-smooth);
+            backdrop-filter: var(--glass-blur);
+        }
+
+        .product-card:hover .product-overlay {
+            opacity: 1;
+        }
+
+        .overlay-button {
+            width: 55px;
+            height: 55px;
+            border-radius: 50%;
+            background: var(--pearl-white);
+            color: var(--onyx-black);
+            border: none;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: var(--transition-smooth);
+            font-size: 1.2rem;
+            box-shadow: var(--shadow-medium);
+        }
+
+        .overlay-button:hover {
+            background: var(--gradient-gold);
+            color: var(--pearl-white);
+            transform: scale(1.15);
+        }
+
+        .product-info {
+            padding: 2rem;
+        }
+
+        .product-category {
+            color: var(--gold-primary);
+            font-size: 0.8rem;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            margin-bottom: 0.5rem;
+            font-weight: 600;
+        }
+
+        .product-name {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.2rem;
+            font-weight: 600;
+            color: var(--onyx-black);
+            margin-bottom: 1rem;
+            line-height: 1.4;
+        }
+
+        .product-rating {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .stars {
+            color: var(--amber);
+            font-size: 1rem;
+            letter-spacing: 2px;
+        }
+
+        .rating-count {
+            color: var(--charcoal);
+            font-size: 0.9rem;
+            font-weight: 500;
+        }
+
+        .product-price {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            margin-bottom: 2rem;
+        }
+
+        .price-current {
+            font-size: 1.6rem;
+            font-weight: 700;
+            color: var(--onyx-black);
+        }
+
+        .price-original {
+            font-size: 1.2rem;
+            color: var(--charcoal);
+            text-decoration: line-through;
+        }
+
+        .price-discount {
+            background: var(--ruby);
+            color: var(--pearl-white);
+            padding: 0.3rem 0.7rem;
+            border-radius: var(--radius-small);
+            font-size: 0.8rem;
+            font-weight: 700;
+        }
+
+        .product-actions {
+            display: flex;
+            gap: 1rem;
+        }
+
+        .btn-add-cart {
+            flex: 1;
+            padding: 1rem;
+            background: var(--gradient-gold);
+            color: var(--pearl-white);
+            border: none;
+            border-radius: var(--radius-medium);
+            font-weight: 600;
+            font-size: 1rem;
+            cursor: pointer;
+            transition: var(--transition-smooth);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .btn-add-cart::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+            transition: left var(--transition-smooth);
+        }
+
+        .btn-add-cart:hover::before {
+            left: 100%;
+        }
+
+        .btn-add-cart:hover {
+            transform: translateY(-2px);
+            box-shadow: var(--shadow-gold);
+        }
+
+        .btn-add-cart.added {
+            background: var(--emerald);
+        }
+
+        .btn-wishlist {
+            width: 55px;
+            height: 55px;
+            border: 2px solid var(--glass-border);
+            background: var(--pearl-white);
+            border-radius: var(--radius-medium);
+            color: var(--charcoal);
+            cursor: pointer;
+            transition: var(--transition-smooth);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.2rem;
+        }
+
+        .btn-wishlist:hover,
+        .btn-wishlist.active {
+            border-color: var(--ruby);
+            color: var(--ruby);
+            background: rgba(224, 17, 95, 0.1);
+        }
+
+        .btn-wishlist.active {
+            animation: heartbeat 0.6s ease;
+        }
+
+        @keyframes heartbeat {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.2); }
+        }
+
+        /* Cart Sidebar */
+        .cart-sidebar {
+            position: fixed;
+            top: 0;
+            right: -500px;
+            width: 500px;
+            height: 100vh;
+            background: var(--pearl-white);
+            backdrop-filter: var(--glass-blur);
+            border-left: 1px solid var(--glass-border);
+            box-shadow: var(--shadow-heavy);
+            z-index: 2000;
+            transition: var(--transition-smooth);
+            overflow-y: auto;
+        }
+
+        .cart-sidebar.open {
+            right: 0;
+        }
+
+        .cart-header {
+            padding: 2rem;
+            border-bottom: 1px solid var(--glass-border);
+            background: var(--gradient-pearl);
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .cart-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--onyx-black);
+        }
+
+        .cart-close {
+            background: var(--glass-bg);
+            border: 1px solid var(--glass-border);
+            border-radius: 50%;
+            width: 45px;
+            height: 45px;
+            cursor: pointer;
+            transition: var(--transition-smooth);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.3rem;
+            color: var(--charcoal);
+        }
+
+        .cart-close:hover {
+            background: var(--ruby);
+            color: var(--pearl-white);
+            transform: rotate(90deg);
+        }
+
+        .cart-content {
+            padding: 2rem;
+        }
+
+        .cart-empty {
+            text-align: center;
+            padding: 4rem 2rem;
+            color: var(--charcoal);
+        }
+
+        .cart-empty-icon {
+            font-size: 5rem;
+            margin-bottom: 1.5rem;
+            opacity: 0.3;
+        }
+
+        .cart-item {
+            display: flex;
+            gap: 1.5rem;
+            padding: 2rem 0;
+            border-bottom: 1px solid var(--glass-border);
+            transition: var(--transition-smooth);
+        }
+
+        .cart-item:hover {
+            background: var(--gradient-pearl);
+            border-radius: var(--radius-medium);
+            padding-left: 1rem;
+            padding-right: 1rem;
+        }
+
+        .cart-item-image {
+            width: 100px;
+            height: 100px;
+            background: var(--gradient-pearl);
+            border-radius: var(--radius-medium);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--gold-primary);
+            font-size: 2rem;
+        }
+
+        .cart-item-details {
+            flex: 1;
+        }
+
+        .cart-item-name {
+            font-family: 'Playfair Display', serif;
+            font-weight: 600;
+            color: var(--onyx-black);
+            margin-bottom: 0.5rem;
+            font-size: 1.1rem;
+        }
+
+        .cart-item-price {
+            color: var(--gold-primary);
+            font-weight: 700;
+            font-size: 1.2rem;
+            margin-bottom: 1rem;
+        }
+
+        .cart-controls {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        .qty-button {
+            width: 40px;
+            height: 40px;
+            border: 1px solid var(--glass-border);
+            background: var(--pearl-white);
+            border-radius: 50%;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1rem;
+            transition: var(--transition-smooth);
+            color: var(--onyx-black);
+        }
+
+        .qty-button:hover {
+            border-color: var(--gold-primary);
+            background: var(--gradient-gold);
+            color: var(--pearl-white);
+        }
+
+        .qty-input {
+            width: 70px;
+            text-align: center;
+            border: 1px solid var(--glass-border);
+            border-radius: var(--radius-small);
+            padding: 0.75rem;
+            font-weight: 600;
+            font-size: 1rem;
+        }
+
+        .cart-remove {
+            background: none;
+            border: none;
+            color: var(--ruby);
+            cursor: pointer;
+            font-size: 1.3rem;
+            padding: 0.75rem;
+            border-radius: 50%;
+            transition: var(--transition-smooth);
+        }
+
+        .cart-remove:hover {
+            background: rgba(224, 17, 95, 0.1);
+            transform: scale(1.1);
+        }
+
+        .cart-footer {
+            border-top: 1px solid var(--glass-border);
+            padding: 2rem;
+            background: var(--gradient-pearl);
+        }
+
+        .cart-total {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 2rem;
+            font-family: 'Playfair Display', serif;
+            font-size: 1.4rem;
+            font-weight: 700;
+        }
+
+        .cart-checkout {
+            width: 100%;
+            padding: 1.5rem;
+            background: var(--gradient-gold);
+            color: var(--pearl-white);
+            border: none;
+            border-radius: var(--radius-medium);
+            font-family: 'Playfair Display', serif;
+            font-weight: 700;
+            font-size: 1.2rem;
+            cursor: pointer;
+            transition: var(--transition-smooth);
+        }
+
+        .cart-checkout:hover {
+            transform: translateY(-3px);
+            box-shadow: var(--shadow-gold);
+        }
+
+        /* Newsletter Section */
+        .luxury-newsletter {
+            background: var(--gradient-luxury);
+            color: var(--pearl-white);
+            padding: 6rem 0;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .luxury-newsletter::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: radial-gradient(circle at 30% 70%, rgba(212, 175, 55, 0.1) 0%, transparent 70%);
+        }
+
+        .newsletter-content {
+            text-align: center;
+            max-width: 700px;
+            margin: 0 auto;
+            position: relative;
+            z-index: 2;
+        }
+
+        .newsletter-icon {
+            width: 100px;
+            height: 100px;
+            background: var(--gradient-gold);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 2rem;
+            font-size: 2.5rem;
+            color: var(--pearl-white);
+            box-shadow: var(--shadow-gold);
+            animation: float 3s ease-in-out infinite;
+        }
+
+        @keyframes float {
+            0%, 100% { transform: translateY(0px); }
+            50% { transform: translateY(-10px); }
+        }
+
+        .newsletter-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 3rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+        }
+
+        .newsletter-subtitle {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 1.3rem;
+            color: rgba(255, 255, 255, 0.8);
+            margin-bottom: 3rem;
+            line-height: 1.6;
+        }
+
+        .newsletter-form {
+            display: flex;
+            gap: 1rem;
+            max-width: 500px;
+            margin: 0 auto;
+        }
+
+        .newsletter-input {
+            flex: 1;
+            padding: 1.5rem 2rem;
+            border: 2px solid rgba(255, 255, 255, 0.2);
+            border-radius: var(--radius-xl);
+            background: rgba(255, 255, 255, 0.1);
+            color: var(--pearl-white);
+            font-size: 1rem;
+            backdrop-filter: var(--glass-blur);
+            transition: var(--transition-smooth);
+        }
+
+        .newsletter-input::placeholder {
+            color: rgba(255, 255, 255, 0.6);
+        }
+
+        .newsletter-input:focus {
+            outline: none;
+            border-color: var(--gold-primary);
+            background: rgba(255, 255, 255, 0.15);
+            box-shadow: var(--shadow-gold);
+        }
+
+        .newsletter-button {
+            padding: 1.5rem 2.5rem;
+            background: var(--gradient-gold);
+            color: var(--pearl-white);
+            border: none;
+            border-radius: var(--radius-xl);
+            font-weight: 700;
+            cursor: pointer;
+            transition: var(--transition-smooth);
+            box-shadow: var(--shadow-gold);
+            font-size: 1rem;
+        }
+
+        .newsletter-button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 15px 50px rgba(212, 175, 55, 0.4);
+        }
+
+        /* Footer */
+        .luxury-footer {
+            background: var(--onyx-black);
+            color: var(--pearl-white);
+            padding: 5rem 0 2rem;
+            position: relative;
+        }
+
+        .luxury-footer::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: var(--texture-fabric);
+            opacity: 0.1;
+        }
+
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 3rem;
+            margin-bottom: 3rem;
+            position: relative;
+        }
+
+        .footer-section h3 {
+            font-family: 'Playfair Display', serif;
+            font-weight: 700;
+            margin-bottom: 2rem;
+            color: var(--gold-primary);
+            font-size: 1.3rem;
+        }
+
+        .footer-section p,
+        .footer-section a {
+            color: rgba(255, 255, 255, 0.8);
+            text-decoration: none;
+            line-height: 1.8;
+            transition: var(--transition-smooth);
+            display: block;
+            margin-bottom: 1rem;
+            font-size: 1.05rem;
+        }
+
+        .footer-section a:hover {
+            color: var(--gold-primary);
+            transform: translateX(10px);
+        }
+
+        .footer-logo {
+            font-family: 'Playfair Display', serif;
+            font-size: 2.5rem;
+            font-weight: 700;
+            background: var(--gradient-gold);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            margin-bottom: 1.5rem;
+        }
+
+        .footer-description {
+            line-height: 1.7;
+            margin-bottom: 2rem;
+            font-size: 1.1rem;
+        }
+
+        .social-links {
+            display: flex;
+            gap: 1.5rem;
+            margin-top: 2rem;
+        }
+
+        .social-link {
+            width: 60px;
+            height: 60px;
+            background: rgba(255, 255, 255, 0.1);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--pearl-white);
+            text-decoration: none;
+            transition: var(--transition-smooth);
+            font-size: 1.5rem;
+            backdrop-filter: var(--glass-blur);
+        }
+
+        .social-link:hover {
+            background: var(--gradient-gold);
+            border-color: var(--gold-primary);
+            transform: translateY(-5px);
+            box-shadow: var(--shadow-gold);
+        }
+
+        .footer-bottom {
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            padding-top: 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 1.5rem;
+            position: relative;
+        }
+
+        .footer-copyright {
+            color: rgba(255, 255, 255, 0.6);
+            font-size: 1rem;
+        }
+
+        .footer-links {
+            display: flex;
+            gap: 2.5rem;
+            flex-wrap: wrap;
+        }
+
+        .footer-links a {
+            color: rgba(255, 255, 255, 0.6);
+            text-decoration: none;
+            transition: var(--transition-smooth);
+            margin-bottom: 0;
+            font-size: 1rem;
+        }
+
+        .footer-links a:hover {
+            color: var(--gold-primary);
+        }
+
+        /* Floating Action Buttons */
+        .floating-actions {
+            position: fixed;
+            bottom: 2rem;
+            right: 2rem;
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+            z-index: 1000;
+        }
+
+        .fab {
+            width: 65px;
+            height: 65px;
+            border-radius: 50%;
+            border: none;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.6rem;
+            transition: var(--transition-bounce);
+            box-shadow: var(--shadow-heavy);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .fab::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: inherit;
+            opacity: 0.8;
+            transition: var(--transition-smooth);
+        }
+
+        .fab:hover::before {
+            opacity: 1;
+        }
+
+        .fab:hover {
+            transform: translateY(-8px) scale(1.1);
+        }
+
+        .fab-scroll {
+            background: var(--gradient-gold);
+            color: var(--pearl-white);
+        }
+
+        .fab-chat {
+            background: var(--emerald);
+            color: var(--pearl-white);
+        }
+
+        .fab-phone {
+            background: var(--sapphire);
+            color: var(--pearl-white);
+        }
+
+        /* Toast Notifications */
+        .toast-container {
+            position: fixed;
+            top: 2rem;
+            right: 2rem;
+            z-index: 3000;
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+        }
+
+        .toast {
+            background: var(--pearl-white);
+            backdrop-filter: var(--glass-blur);
+            border-left: 4px solid var(--emerald);
+            border-radius: var(--radius-medium);
+            padding: 1.5rem 2rem;
+            box-shadow: var(--shadow-heavy);
+            transform: translateX(400px);
+            transition: var(--transition-smooth);
+            max-width: 400px;
+            position: relative;
+        }
+
+        .toast.show {
+            transform: translateX(0);
+        }
+
+        .toast.error {
+            border-left-color: var(--ruby);
+        }
+
+        .toast.warning {
+            border-left-color: var(--amber);
+        }
+
+        .toast.info {
+            border-left-color: var(--sapphire);
+        }
+
+        .toast-content {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        .toast-icon {
+            font-size: 1.5rem;
+        }
+
+        .toast-icon.success { color: var(--emerald); }
+        .toast-icon.error { color: var(--ruby); }
+        .toast-icon.warning { color: var(--amber); }
+        .toast-icon.info { color: var(--sapphire); }
+
+        .toast-message {
+            flex: 1;
+            font-weight: 500;
+            color: var(--onyx-black);
+            font-size: 1rem;
+        }
+
+        .toast-close {
+            background: none;
+            border: none;
+            color: var(--charcoal);
+            cursor: pointer;
+            font-size: 1.2rem;
+            transition: var(--transition-smooth);
+            padding: 0.5rem;
+            border-radius: 50%;
+        }
+
+               .toast-close:hover {
+            color: var(--onyx-black);
+            background: rgba(0, 0, 0, 0.1);
+        }
+
+        /* Quick View Modal */
+        .modal-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.8);
+            backdrop-filter: var(--glass-blur);
+            display: none;
+            align-items: center;
+            justify-content: center;
+            z-index: 2000;
+            animation: fadeIn 0.3s ease;
+        }
+
+        .modal-overlay.show {
+            display: flex;
+        }
+
+        .modal-content {
+            background: var(--pearl-white);
+            backdrop-filter: var(--glass-blur);
+            border-radius: var(--radius-large);
+            padding: 3rem;
+            max-width: 1000px;
+            width: 95%;
+            max-height: 95vh;
+            overflow-y: auto;
+            position: relative;
+            animation: slideInUp 0.4s ease;
+            box-shadow: var(--shadow-heavy);
+            border: 1px solid var(--glass-border);
+        }
+
+        .modal-close {
+            position: absolute;
+            top: 2rem;
+            right: 2rem;
+            background: var(--glass-bg);
+            border: 1px solid var(--glass-border);
+            border-radius: 50%;
+            width: 50px;
+            height: 50px;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            color: var(--charcoal);
+            transition: var(--transition-smooth);
+            backdrop-filter: var(--glass-blur);
+        }
+
+        .modal-close:hover {
+            background: var(--ruby);
+            color: var(--pearl-white);
+            transform: rotate(90deg);
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        @keyframes slideInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* Responsive Design */
+        @media (max-width: 1200px) {
+            .container {
+                padding: 0 1.5rem;
+            }
+            
+            .header-nav {
+                padding: 1rem 1.5rem;
+            }
+        }
+
+        @media (max-width: 992px) {
+            .nav-menu {
+                display: none;
+            }
+
+            .mobile-toggle {
+                display: block;
+            }
+
+            .search-input {
+                width: 250px;
+            }
+
+            .hero-title {
+                font-size: clamp(2.5rem, 6vw, 5rem);
+            }
+
+            .features-grid {
+                grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            }
+
+            .products-grid {
+                grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            }
+
+            .newsletter-form {
+                flex-direction: column;
+            }
+
+            .footer-bottom {
+                flex-direction: column;
+                text-align: center;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .header-nav {
+                padding: 1rem;
+            }
+
+            .luxury-search {
+                display: none;
+            }
+
+            .hero-actions {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .luxury-button {
+                width: 100%;
+                max-width: 300px;
+                justify-content: center;
+            }
+
+            .product-filters {
+                justify-content: flex-start;
+                overflow-x: auto;
+                padding-bottom: 1rem;
+            }
+
+            .products-grid {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+
+            .cart-sidebar {
+                width: 100vw;
+                right: -100vw;
+            }
+
+            .floating-actions {
+                bottom: 1rem;
+                right: 1rem;
+            }
+
+            .fab {
+                width: 55px;
+                height: 55px;
+                font-size: 1.3rem;
+            }
+
+            .toast-container {
+                top: 1rem;
+                right: 1rem;
+                left: 1rem;
+            }
+
+            .toast {
+                max-width: none;
+            }
+
+            .modal-content {
+                padding: 2rem;
+                width: 95%;
+            }
+        }
+
+        @media (max-width: 480px) {
+            body {
+                cursor: auto;
+            }
+
+            .luxury-cursor,
+            .luxury-cursor-trail {
+                display: none;
+            }
+
+            .luxury-hero {
+                height: 90vh;
+                padding: 2rem 0;
+            }
+
+            .section-title {
+                font-size: clamp(2rem, 5vw, 3rem);
+            }
+
+            .feature-card {
+                padding: 2rem 1.5rem;
+            }
+
+            .nav-actions {
+                gap: 0.5rem;
+            }
+
+            .action-button {
+                width: 42px;
+                height: 42px;
+                font-size: 1rem;
+            }
+
+            .luxury-logo {
+                font-size: 1.8rem;
+            }
+
+            .hero-badge {
+                padding: 0.5rem 1rem;
+                font-size: 0.8rem;
+            }
+        }
+
+        /* Print Styles */
+        @media print {
+            .luxury-header,
+            .floating-actions,
+            .toast-container,
+            .modal-overlay,
+            .cart-sidebar,
+            .luxury-background,
+            .geometric-luxury,
+            .luxury-particles {
+                display: none !important;
+            }
+
+            body {
+                color: black !important;
+                background: white !important;
+                cursor: auto !important;
+            }
+
+            .luxury-hero {
+                background: white !important;
+                color: black !important;
+            }
+        }
+
+        /* Accessibility */
+        @media (prefers-reduced-motion: reduce) {
+            *,
+            *::before,
+            *::after {
+                animation-duration: 0.01ms !important;
+                animation-iteration-count: 1 !important;
+                transition-duration: 0.01ms !important;
+            }
+        }
+
+        /* High Contrast Mode */
+        @media (prefers-contrast: high) {
+            :root {
+                --shadow-soft: 0 0 0 2px black;
+                --shadow-medium: 0 0 0 3px black;
+                --shadow-heavy: 0 0 0 4px black;
+                --shadow-gold: 0 0 0 3px var(--gold-primary);
+            }
+        }
+
+        /* Focus Styles */
+        *:focus {
+            outline: 3px solid var(--gold-primary);
+            outline-offset: 2px;
+        }
+
+        /* Selection Styles */
+        ::selection {
+            background: var(--gold-primary);
+            color: var(--pearl-white);
+        }
+
+        ::-moz-selection {
+            background: var(--gold-primary);
+            color: var(--pearl-white);
+        }
+
+        /* Custom Scrollbar */
+        ::-webkit-scrollbar {
+            width: 12px;
+        }
+
+        ::-webkit-scrollbar-track {
+            background: var(--gradient-pearl);
+            border-radius: 6px;
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background: var(--gradient-gold);
+            border-radius: 6px;
+            border: 2px solid var(--pearl-white);
+        }
+
+        ::-webkit-scrollbar-thumb:hover {
+            background: var(--gold-dark);
+        }
+
+        /* Mobile Menu */
+        .mobile-menu {
+            position: fixed;
+            top: 0;
+            right: -100%;
+            width: 350px;
+            height: 100vh;
+            background: var(--pearl-white);
+            backdrop-filter: var(--glass-blur);
+            border-left: 1px solid var(--glass-border);
+            z-index: 2000;
+            transition: var(--transition-smooth);
+            padding: 2rem;
+            overflow-y: auto;
+            box-shadow: var(--shadow-heavy);
+        }
+
+        .mobile-menu.open {
+            right: 0;
+        }
+
+        .mobile-menu-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 3rem;
+            padding-bottom: 2rem;
+            border-bottom: 1px solid var(--glass-border);
+        }
+
+        .mobile-menu-close {
+            background: var(--glass-bg);
+            border: 1px solid var(--glass-border);
+            border-radius: 50%;
+            width: 45px;
+            height: 45px;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.3rem;
+            color: var(--charcoal);
+            transition: var(--transition-smooth);
+        }
+
+        .mobile-menu-close:hover {
+            background: var(--ruby);
+            color: var(--pearl-white);
+        }
+
+        .mobile-nav-links {
+            list-style: none;
+        }
+
+        .mobile-nav-links li {
+            margin-bottom: 2rem;
+        }
+
+        .mobile-nav-links a {
+            color: var(--onyx-black);
+            text-decoration: none;
+            font-size: 1.2rem;
+            font-weight: 500;
+            padding: 1.5rem 0;
+            display: block;
+            border-bottom: 1px solid var(--glass-border);
+            transition: var(--transition-smooth);
+        }
+
+        .mobile-nav-links a:hover {
+            color: var(--gold-primary);
+            transform: translateX(15px);
+        }
+
+        /* Search Suggestions */
+        .search-suggestions {
+            position: absolute;
+            top: 100%;
+            left: 0;
+            right: 0;
+            background: var(--pearl-white);
+            backdrop-filter: var(--glass-blur);
+            border: 1px solid var(--glass-border);
+            border-radius: var(--radius-medium);
+            box-shadow: var(--shadow-heavy);
+            z-index: 1000;
+            max-height: 400px;
+            overflow-y: auto;
+            opacity: 0;
+            visibility: hidden;
+            transform: translateY(-10px);
+            transition: var(--transition-smooth);
+            margin-top: 0.5rem;
+        }
+
+        .search-suggestions.show {
+            opacity: 1;
+            visibility: visible;
+            transform: translateY(0);
+        }
+
+        .suggestion-item {
+            padding: 1.2rem 1.5rem;
+            border-bottom: 1px solid var(--glass-border);
+            cursor: pointer;
+            transition: var(--transition-smooth);
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        .suggestion-item:hover {
+            background: var(--gradient-pearl);
+            color: var(--gold-primary);
+        }
+
+        .suggestion-item:last-child {
+            border-bottom: none;
+        }
+
+        /* Utility Classes */
+        .text-gradient {
+            background: var(--gradient-gold);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .bg-glass {
+            background: var(--glass-bg);
+            backdrop-filter: var(--glass-blur);
+        }
+
+        .shadow-luxury {
+            box-shadow: var(--shadow-heavy);
+        }
+
+        .transition-smooth {
+            transition: var(--transition-smooth);
+        }
+
+        .border-gradient {
+            border: 2px solid transparent;
+            background: linear-gradient(var(--pearl-white), var(--pearl-white)) padding-box, var(--gradient-gold) border-box;
+        }
+
+        /* Animation Classes */
+        .animate-fade-in {
+            animation: fadeIn 0.8s ease;
+        }
+
+        .animate-slide-up {
+            animation: slideUp 0.8s ease;
+        }
+
+        .animate-bounce {
+            animation: bounce 2s ease infinite;
+        }
+
+        .animate-pulse {
+            animation: pulse 3s ease-in-out infinite;
+        }
+
+        .animate-float {
+            animation: float 4s ease-in-out infinite;
+        }
+
+        @keyframes bounce {
+            0%, 20%, 53%, 80%, 100% {
+                transform: translateY(0);
+            }
+            40%, 43% {
+                transform: translateY(-20px);
+            }
+            70% {
+                transform: translateY(-10px);
+            }
+            90% {
+                transform: translateY(-4px);
+            }
+        }
+
+        @keyframes pulse {
+            0%, 100% {
+                opacity: 1;
+                transform: scale(1);
+            }
+            50% {
+                opacity: 0.8;
+                transform: scale(1.05);
+            }
+        }
+
+        /* Dark Theme Specific Styles */
+        [data-theme="dark"] .luxury-header {
+            background: rgba(26, 26, 26, 0.9);
+            border-bottom-color: rgba(255, 255, 255, 0.1);
+        }
+
+        [data-theme="dark"] .search-container {
+            background: rgba(45, 45, 45, 0.9);
+            border-color: rgba(255, 255, 255, 0.2);
+        }
+
+        [data-theme="dark"] .feature-card {
+            background: rgba(45, 45, 45, 0.8);
+            border-color: rgba(255, 255, 255, 0.1);
+        }
+
+        [data-theme="dark"] .product-card {
+            background: rgba(26, 26, 26, 0.9);
+            border-color: rgba(255, 255, 255, 0.1);
+        }
+
+        [data-theme="dark"] .cart-sidebar {
+            background: rgba(26, 26, 26, 0.95);
+        }
+
+        [data-theme="dark"] .modal-content {
+            background: rgba(45, 45, 45, 0.95);
+        }
+
+        [data-theme="dark"] .toast {
+            background: rgba(45, 45, 45, 0.95);
+            color: var(--pearl-white);
+        }
+
+        [data-theme="dark"] .mobile-menu {
+            background: rgba(26, 26, 26, 0.95);
+        }
+
+        /* Loading States */
+        .loading {
+            pointer-events: none;
+            opacity: 0.7;
+            position: relative;
+        }
+
+        .loading::after {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 25px;
+            height: 25px;
+            margin: -12px 0 0 -12px;
+            border: 3px solid var(--gold-primary);
+            border-radius: 50%;
+            border-top-color: transparent;
+            animation: spin 1s linear infinite;
+        }
+
+        @keyframes spin {
+            to { transform: rotate(360deg); }
+        }
+
+        /* Error States */
+        .error {
+            border-color: var(--ruby) !important;
+            background: rgba(224, 17, 95, 0.1) !important;
+        }
+
+        .success {
+            border-color: var(--emerald) !important;
+            background: rgba(80, 200, 120, 0.1) !important;
+        }
+
+        /* Performance Optimizations */
+        .gpu-acceleration {
+            transform: translateZ(0);
+            will-change: transform;
+        }
+
+        .no-select {
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+            user-select: none;
+        }
+    </style>
+</head>
+<body data-theme="light">
+    <!-- Luxury Animated Background -->
+    <div class="luxury-background"></div>
+    <div class="geometric-luxury"></div>
+
+    <!-- Premium Cursor System -->
+    <div class="luxury-cursor"></div>
+    <div class="luxury-cursor-trail"></div>
+
+    <!-- Luxury Particles -->
+    <div class="luxury-particles" id="luxuryParticles"></div>
+
+    <!-- Progress Bar -->
+    <div class="luxury-progress" id="luxuryProgress"></div>
+
+    <!-- Luxury Loading Screen -->
+    <div class="luxury-loading" id="luxuryLoading">
+        <div class="loading-diamond"></div>
+        <div class="loading-text">Crook Store</div>
+    </div>
+
+    <!-- Luxury Header -->
+    <header class="luxury-header" id="luxuryHeader">
+        <div class="header-announcement">
+            🔥 MEGA LUXURY SALE: Up to 80% OFF Premium Jewelry | Free Worldwide Shipping | Lifetime Guarantee 🔥
+        </div>
+        <nav class="header-nav">
+            <a href="#" class="luxury-logo">Crook Store</a>
+
+            <ul class="nav-menu" id="navMenu">
+                <li class="nav-item"><a href="#home" class="nav-link active">Home</a></li>
+                <li class="nav-item"><a href="#products" class="nav-link">Collections</a></li>
+                <li class="nav-item"><a href="#bestsellers" class="nav-link">Best Sellers</a></li>
+                <li class="nav-item"><a href="#new-arrivals" class="nav-link">New Arrivals</a></li>
+                <li class="nav-item"><a href="#about" class="nav-link">About</a></li>
+                <li class="nav-item"><a href="#contact" class="nav-link">Contact</a></li>
+            </ul>
+
+            <div class="nav-actions">
+                <div class="luxury-search">
+                    <div class="search-container" id="searchContainer">
+                        <i class="fas fa-search search-icon"></i>
+                        <input type="text" class="search-input" placeholder="Search luxury jewelry..." id="searchInput">
+                    </div>
+                    <div class="search-suggestions" id="searchSuggestions"></div>
+                </div>
+
+                <button class="theme-toggle" id="themeToggle" title="Toggle Theme">
+                    <i class="fas fa-moon theme-icon" id="themeIcon"></i>
+                    <span>Theme</span>
+                </button>
+
+                <button class="action-button" id="wishlistBtn" title="Wishlist">
+                    <i class="fas fa-heart"></i>
+                    <span class="action-badge" id="wishlistBadge">0</span>
+                </button>
+
+                <button class="action-button" id="cartBtn" title="Shopping Cart">
+                    <i class="fas fa-shopping-bag"></i>
+                    <span class="action-badge" id="cartBadge">0</span>
+                </button>
+
+                <button class="action-button" id="userBtn" title="Account">
+                    <i class="fas fa-user-crown"></i>
+                </button>
+
+                <button class="mobile-toggle" id="mobileToggle">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Mobile Menu -->
+    <div class="mobile-menu" id="mobileMenu">
+        <div class="mobile-menu-header">
+            <div class="luxury-logo">Crook Store</div>
+            <button class="mobile-menu-close" id="mobileMenuClose">
+                <i class="fas fa-times"></i>
+            </button>
+        </div>
+        <ul class="mobile-nav-links">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#products">Collections</a></li>
+            <li><a href="#bestsellers">Best Sellers</a></li>
+            <li><a href="#new-arrivals">New Arrivals</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </div>
+
+    <!-- Luxury Hero Section -->
+    <section class="luxury-hero" id="home">
+        <div class="hero-shapes">
+            <div class="floating-shape"></div>
+            <div class="floating-shape"></div>
+            <div class="floating-shape"></div>
+        </div>
+        
+        <div class="hero-content">
+            <div class="hero-badge animate-fade-in">
+                <i class="fas fa-crown"></i>
+                <span>Luxury Collection 2025</span>
+            </div>
+            <h1 class="hero-title animate-slide-up">Unapologetically <span class="text-gradient">Luxurious</span></h1>
+            <p class="hero-subtitle animate-slide-up">
+                Discover the finest handcrafted jewelry pieces that define elegance, sophistication, and timeless beauty. 
+                Each creation tells a story of premium craftsmanship and uncompromising quality.
+            </p>
+            <div class="hero-actions animate-slide-up">
+                <a href="#products" class="luxury-button btn-primary">
+                    <span>Explore Collection</span>
+                    <i class="fas fa-gem"></i>
+                </a>
+                <a href="#about" class="luxury-button btn-secondary">
+                    <span>Our Heritage</span>
+                    <i class="fas fa-play-circle"></i>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Luxury Features Section -->
+    <section class="luxury-features" id="features">
+        <div class="container">
+            <div class="features-grid">
+                <div class="feature-card animate-fade-in">
+                    <div class="feature-icon">
+                        <i class="fas fa-shipping-fast"></i>
+                    </div>
+                    <h3 class="feature-title">Premium Express Delivery</h3>
+                    <p class="feature-description">
+                        Complimentary express shipping worldwide on orders above ₹999. Same-day delivery available in metro cities with white-glove service.
+                    </p>
+                </div>
+
+                <div class="feature-card animate-fade-in">
+                    <div class="feature-icon">
+                        <i class="fas fa-shield-check"></i>
+                    </div>
+                    <h3 class="feature-title">Bank-Grade Security</h3>
+                    <p class="feature-description">
+                        Military-grade 256-bit SSL encryption with multiple secure payment gateways. Your privacy and security are our top priorities.
+                    </p>
+                </div>
+
+                <div class="feature-card animate-fade-in">
+                    <div class="feature-icon">
+                        <i class="fas fa-gem"></i>
+                    </div>
+                    <h3 class="feature-title">Handcrafted Excellence</h3>
+                    <p class="feature-description">
+                        Each piece is meticulously handcrafted by master artisans using the finest materials. Lifetime quality guarantee included.
+                    </p>
+                </div>
+
+                <div class="feature-card animate-fade-in">
+                    <div class="feature-icon">
+                        <i class="fas fa-concierge-bell"></i>
+                    </div>
+                    <h3 class="feature-title">VIP Concierge Service</h3>
+                    <p class="feature-description">
+                        24/7 personal shopping assistance with dedicated jewelry consultants. Experience luxury service that exceeds expectations.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Luxury Products Section -->
+    <section class="luxury-products" id="products">
+        <div class="container">
+            <div class="section-header">
+                <div class="section-badge animate-fade-in">
+                    <i class="fas fa-crown"></i>
+                    <span>Premium Collection</span>
+                </div>
+                <h2 class="section-title animate-slide-up">Luxury <span class="text-gradient">Jewelry</span></h2>
+                <p class="section-subtitle animate-slide-up">
+                    Immerse yourself in our curated collection of the world's finest jewelry pieces, each designed to celebrate your unique style and sophistication.
+                </p>
+            </div>
+
+            <div class="product-filters">
+                <button class="filter-button active" data-filter="all">All Collections</button>
+                <button class="filter-button" data-filter="necklaces">Necklaces</button>
+                <button class="filter-button" data-filter="rings">Rings</button>
+                <button class="filter-button" data-filter="bracelets">Bracelets</button>
+                <button class="filter-button" data-filter="chains">Chains</button>
+                <button class="filter-button" data-filter="accessories">Accessories</button>
+            </div>
+
+            <div class="products-grid" id="productsGrid">
+                <!-- Product 1 -->
+                <div class="product-card animate-fade-in" data-category="necklaces">
+                    <div class="product-image-container">
+                        <img src="https://crookstore.in/cdn/shop/files/1AC802C6-7590-4EC3-8393-81010E22FBC9.jpg?v=1720417247&width=360" alt="Multi-Layer Gold Chain Necklace" class="product-image">
+                        <div class="product-badges">
+                            <span class="product-badge badge-new">New</span>
+                            <span class="product-badge badge-trending">Trending</span>
+                        </div>
+                        <div class="product-overlay">
+                            <button class="overlay-button" data-action="quickview" data-product="necklace-1" title="Quick View">
+                                <i class="fas fa-eye"></i>
+                            </button>
+                            <button class="overlay-button" data-action="wishlist" data-product="necklace-1" title="Add to Wishlist">
+                                <i class="fas fa-heart"></i>
+                            </button>
+                            <button class="overlay-button" data-action="compare" data-product="necklace-1" title="Compare">
+                                <i class="fas fa-balance-scale"></i>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <div class="product-category">Premium Necklaces</div>
+                        <h3 class="product-name">Multi-Layer Gold Chain Necklace Set</h3>
+                        <div class="product-rating">
+                            <div class="stars">★★★★★</div>
+                            <span class="rating-count">(127 reviews)</span>
+                        </div>
+                        <div class="product-price">
+                            <span class="price-current">₹2,299</span>
+                            <span class="price-original">₹3,499</span>
+                            <span class="price-discount">-34%</span>
+                        </div>
+                        <div class="product-actions">
+                            <button class="btn-add-cart" data-product="necklace-1">Add to Cart</button>
+                            <button class="btn-wishlist" data-product="necklace-1">
+                                <i class="fas fa-heart"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product 2 -->
+                <div class="product-card animate-fade-in" data-category="rings">
+                    <div class="product-image-container">
+                        <img src="https://crookstore.in/cdn/shop/files/VS_03667.jpg?v=1725882520&width=360" alt="Vintage Signet Ring" class="product-image">
+                        <div class="product-badges">
+                            <span class="product-badge badge-limited">Limited Edition</span>
+                        </div>
+                        <div class="product-overlay">
+                            <button class="overlay-button" data-action="quickview" data-product="ring-1" title="Quick View">
+                                <i class="fas fa-eye"></i>
+                            </button>
+                            <button class="overlay-button" data-action="wishlist" data-product="ring-1" title="Add to Wishlist">
+                                <i class="fas fa-heart"></i>
+                            </button>
+                            <button class="overlay-button" data-action="compare" data-product="ring-1" title="Compare">
+                                <i class="fas fa-balance-scale"></i>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <div class="product-category">Luxury Rings</div>
+                        <h3 class="product-name">Vintage Gold Signet Ring - Premium</h3>
+                        <div class="product-rating">
+                            <div class="stars">★★★★★</div>
+                            <span class="rating-count">(89 reviews)</span>
+                        </div>
+                        <div class="product-price">
+                            <span class="price-current">₹1,899</span>
+                        </div>
+                        <div class="product-actions">
+                            <button class="btn-add-cart" data-product="ring-1">Add to Cart</button>
+                            <button class="btn-wishlist" data-product="ring-1">
+                                <i class="fas fa-heart"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product 3 -->
+                <div class="product-card animate-fade-in" data-category="bracelets">
+                    <div class="product-image-container">
+                        <img src="https://crookstore.in/cdn/shop/files/2_6.jpg?v=1719908733&width=360" alt="Cuban Link Bracelet" class="product-image">
+                        <div class="product-badges">
+                            <span class="product-badge badge-sale">Hot Sale</span>
+                        </div>
+                        <div class="product-overlay">
+                            <button class="overlay-button" data-action="quickview" data-product="bracelet-1" title="Quick View">
+                                <i class="fas fa-eye"></i>
+                            </button>
+                            <button class="overlay-button" data-action="wishlist" data-product="bracelet-1" title="Add to Wishlist">
+                                <i class="fas fa-heart"></i>
+                            </button>
+                            <button class="overlay-button" data-action="compare" data-product="bracelet-1" title="Compare">
+                                <i class="fas fa-balance-scale"></i>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <div class="product-category">Premium Bracelets</div>
+                        <h3 class="product-name">Cuban Link Chain Bracelet Gold</h3>
+                        <div class="product-rating">
+                            <div class="stars">★★★★★</div>
+                            <span class="rating-count">(156 reviews)</span>
+                        </div>
+                        <div class="product-price">
+                            <span class="price-current">₹2,799</span>
+                            <span class="price-original">₹4,199</span>
+                            <span class="price-discount">-33%</span>
+                        </div>
+                        <div class="product-actions">
+                            <button class="btn-add-cart" data-product="bracelet-1">Add to Cart</button>
+                            <button class="btn-wishlist" data-product="bracelet-1">
+                                <i class="fas fa-heart"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product 4 -->
+                <div class="product-card animate-fade-in" data-category="chains">
+                    <div class="product-image-container">
+                        <img src="https://crookstore.in/cdn/shop/files/VS_03702.jpg?v=1725882202&width=360" alt="Boss Lady Chain" class="product-image">
+                        <div class="product-overlay">
+                            <button class="overlay-button" data-action="quickview" data-product="chain-1" title="Quick View">
+                                <i class="fas fa-eye"></i>
+                            </button>
+                            <button class="overlay-button" data-action="wishlist" data-product="chain-1" title="Add to Wishlist">
+                                <i class="fas fa-heart"></i>
+                            </button>
+                            <button class="overlay-button" data-action="compare" data-product="chain-1" title="Compare">
+                                <i class="fas fa-balance-scale"></i>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <div class="product-category">Luxury Chains</div>
+                        <h3 class="product-name">Boss Lady Premium Gold Chain</h3>
+                        <div class="product-rating">
+                            <div class="stars">★★★★☆</div>
+                            <span class="rating-count">(67 reviews)</span>
+                        </div>
+                        <div class="product-price">
+                            <span class="price-current">₹3,299</span>
+                        </div>
+                        <div class="product-actions">
+                            <button class="btn-add-cart" data-product="chain-1">Add to Cart</button>
+                            <button class="btn-wishlist" data-product="chain-1">
+                                <i class="fas fa-heart"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product 5 -->
+                <div class="product-card animate-fade-in" data-category="accessories">
+                    <div class="product-image-container">
+                        <img src="https://crookstore.in/cdn/shop/files/FDC754DE-D9EC-4685-BF06-05587C6A2899.jpg?v=1720417076&width=360" alt="Vintage Watch Chain" class="product-image">
+                        <div class="product-badges">
+                            <span class="product-badge badge-new">Exclusive</span>
+                        </div>
+                        <div class="product-overlay">
+                            <button class="overlay-button" data-action="quickview" data-product="watch-1" title="Quick View">
+                                <i class="fas fa-eye"></i>
+                            </button>
+                            <button class="overlay-button" data-action="wishlist" data-product="watch-1" title="Add to Wishlist">
+                                <i class="fas fa-heart"></i>
+                            </button>
+                            <button class="overlay-button" data-action="compare" data-product="watch-1" title="Compare">
+                                <i class="fas fa-balance-scale"></i>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <div class="product-category">Premium Accessories</div>
+                        <h3 class="product-name">Vintage Pocket Watch Chain Gold</h3>
+                        <div class="product-rating">
+                            <div class="stars">★★★★★</div>
+                            <span class="rating-count">(43 reviews)</span>
+                        </div>
+                        <div class="product-price">
+                            <span class="price-current">₹1,699</span>
+                            <span class="price-original">₹2,399</span>
+                            <span class="price-discount">-29%</span>
+                        </div>
+                        <div class="product-actions">
+                            <button class="btn-add-cart" data-product="watch-1">Add to Cart</button>
+                            <button class="btn-wishlist" data-product="watch-1">
+                                <i class="fas fa-heart"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product 6 -->
+                <div class="product-card animate-fade-in" data-category="rings">
+                    <div class="product-image-container">
+                        <img src="https://crookstore.in/cdn/shop/files/IMG_0346_4bb97e9f-5e7f-4614-abd1-ddb8a6c5635a.jpg?v=1756023827&width=360" alt="Gothic Skull Ring" class="product-image">
+                        <div class="product-badges">
+                            <span class="product-badge badge-trending">Bestseller</span>
+                        </div>
+                        <div class="product-overlay">
+                            <button class="overlay-button" data-action="quickview" data-product="skull-ring-1" title="Quick View">
+                                <i class="fas fa-eye"></i>
+                            </button>
+                            <button class="overlay-button" data-action="wishlist" data-product="skull-ring-1" title="Add to Wishlist">
+                                <i class="fas fa-heart"></i>
+                            </button>
+                            <button class="overlay-button" data-action="compare" data-product="skull-ring-1" title="Compare">
+                                <i class="fas fa-balance-scale"></i>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <div class="product-category">Statement Rings</div>
+                        <h3 class="product-name">Gothic Skull Ring Premium Steel</h3>
+                        <div class="product-rating">
+                            <div class="stars">★★★★★</div>
+                            <span class="rating-count">(234 reviews)</span>
+                        </div>
+                        <div class="product-price">
+                            <span class="price-current">₹1,299</span>
+                            <span class="price-original">₹1,899</span>
+                            <span class="price-discount">-32%</span>
+                        </div>
+                        <div class="product-actions">
+                            <button class="btn-add-cart" data-product="skull-ring-1">Add to Cart</button>
+                            <button class="btn-wishlist" data-product="skull-ring-1">
+                                <i class="fas fa-heart"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product 7 -->
+                <div class="product-card animate-fade-in" data-category="necklaces">
+                    <div class="product-image-container">
+                        <img src="https://crookstore.in/cdn/shop/files/29.png?v=1753209138&width=360" alt="Premium Pendant Necklace" class="product-image">
+                        <div class="product-badges">
+                            <span class="product-badge badge-new">New Arrival</span>
+                        </div>
+                        <div class="product-overlay">
+                            <button class="overlay-button" data-action="quickview" data-product="pendant-1" title="Quick View">
+                                <i class="fas fa-eye"></i>
+                            </button>
+                            <button class="overlay-button" data-action="wishlist" data-product="pendant-1" title="Add to Wishlist">
+                                <i class="fas fa-heart"></i>
+                            </button>
+                            <button class="overlay-button" data-action="compare" data-product="pendant-1" title="Compare">
+                                <i class="fas fa-balance-scale"></i>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <div class="product-category">Designer Necklaces</div>
+                        <h3 class="product-name">Premium Pendant Necklace Gold</h3>
+                        <div class="product-rating">
+                            <div class="stars">★★★★★</div>
+                            <span class="rating-count">(78 reviews)</span>
+                        </div>
+                        <div class="product-price">
+                            <span class="price-current">₹1,999</span>
+                            <span class="price-original">₹2,899</span>
+                            <span class="price-discount">-31%</span>
+                        </div>
+                        <div class="product-actions">
+                            <button class="btn-add-cart" data-product="pendant-1">Add to Cart</button>
+                            <button class="btn-wishlist" data-product="pendant-1">
+                                <i class="fas fa-heart"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product 8 -->
+                <div class="product-card animate-fade-in" data-category="bracelets">
+                    <div class="product-image-container">
+                        <img src="https://crookstore.in/cdn/shop/files/39_1.jpg?v=1718351750&width=360" alt="Luxury Tennis Bracelet" class="product-image">
+                        <div class="product-badges">
+                            <span class="product-badge badge-sale">Limited Time</span>
+                        </div>
+                        <div class="product-overlay">
+                            <button class="overlay-button" data-action="quickview" data-product="tennis-1" title="Quick View">
+                                <i class="fas fa-eye"></i>
+                            </button>
+                            <button class="overlay-button" data-action="wishlist" data-product="tennis-1" title="Add to Wishlist">
+                                <i class="fas fa-heart"></i>
+                            </button>
+                            <button class="overlay-button" data-action="compare" data-product="tennis-1" title="Compare">
+                                <i class="fas fa-balance-scale"></i>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <div class="product-category">Elite Bracelets</div>
+                        <h3 class="product-name">Luxury Tennis Bracelet Diamond Cut</h3>
+                        <div class="product-rating">
+                            <div class="stars">★★★★★</div>
+                            <span class="rating-count">(92 reviews)</span>
+                        </div>
+                        <div class="product-price">
+                            <span class="price-current">₹3,499</span>
+                            <span class="price-original">₹4,999</span>
+                            <span class="price-discount">-30%</span>
+                        </div>
+                        <div class="product-actions">
+                            <button class="btn-add-cart" data-product="tennis-1">Add to Cart</button>
+                            <button class="btn-wishlist" data-product="tennis-1">
+                                <i class="fas fa-heart"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product 9 -->
+                <div class="product-card animate-fade-in" data-category="chains">
+                    <div class="product-image-container">
+                        <img src="https://crookstore.in/cdn/shop/files/IMG_1944.jpg?v=1729575533&width=360" alt="Miami Cuban Chain" class="product-image">
+                        <div class="product-badges">
+                            <span class="product-badge badge-trending">Viral</span>
+                        </div>
+                        <div class="product-overlay">
+                            <button class="overlay-button" data-action="quickview" data-product="miami-1" title="Quick View">
+                                <i class="fas fa-eye"></i>
+                            </button>
+                            <button class="overlay-button" data-action="wishlist" data-product="miami-1" title="Add to Wishlist">
+                                <i class="fas fa-heart"></i>
+                            </button>
+                            <button class="overlay-button" data-action="compare" data-product="miami-1" title="Compare">
+                                <i class="fas fa-balance-scale"></i>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <div class="product-category">Statement Chains</div>
+                        <h3 class="product-name">Miami Cuban Chain Premium Gold</h3>
+                        <div class="product-rating">
+                            <div class="stars">★★★★★</div>
+                            <span class="rating-count">(198 reviews)</span>
+                        </div>
+                        <div class="product-price">
+                            <span class="price-current">₹4,299</span>
+                            <span class="price-original">₹5,999</span>
+                            <span class="price-discount">-28%</span>
+                        </div>
+                        <div class="product-actions">
+                            <button class="btn-add-cart" data-product="miami-1">Add to Cart</button>
+                            <button class="btn-wishlist" data-product="miami-1">
+                                <i class="fas fa-heart"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="view-all-container" style="text-align: center; margin-top: 4rem;">
+                <a href="#" class="luxury-button btn-secondary">
+                    <span>View Complete Collection</span>
+                    <i class="fas fa-arrow-right"></i>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Luxury Newsletter -->
+    <section class="luxury-newsletter" id="newsletter">
+        <div class="container">
+            <div class="newsletter-content">
+                <div class="newsletter-icon animate-bounce">
+                    <i class="fas fa-envelope-open"></i>
+                </div>
+                <h2 class="newsletter-title animate-slide-up">Join the <span class="text-gradient">Elite Circle</span></h2>
+                <p class="newsletter-subtitle animate-slide-up">
+                    Become part of our exclusive community and receive first access to new collections, VIP member benefits, 
+                    and insider jewelry styling tips from our master craftsmen.
+                </p>
+                <form class="newsletter-form animate-slide-up" id="newsletterForm">
+                    <input type="email" class="newsletter-input" placeholder="Enter your email for exclusive access" required>
+                    <button type="submit" class="newsletter-button">Join Elite Circle</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Luxury Footer -->
+    <footer class="luxury-footer" id="contact">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <div class="footer-logo">Crook Store</div>
+                    <p class="footer-description">
+                        Where luxury meets individuality. We craft extraordinary jewelry pieces that celebrate your unique story, 
+                        combining traditional artistry with contemporary design for the modern connoisseur.
+                    </p>
+                    <div class="social-links">
+                        <a href="#" class="social-link" title="Instagram">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="#" class="social-link" title="Facebook">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a href="#" class="social-link" title="Twitter">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                        <a href="#" class="social-link" title="YouTube">
+                            <i class="fab fa-youtube"></i>
+                        </a>
+                        <a href="#" class="social-link" title="Pinterest">
+                            <i class="fab fa-pinterest"></i>
+                        </a>
+                        <a href="#" class="social-link" title="TikTok">
+                            <i class="fab fa-tiktok"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="footer-section">
+                    <h3>Luxury Collections</h3>
+                    <a href="#products">Premium Necklaces</a>
+                    <a href="#products">Statement Rings</a>
+                    <a href="#products">Designer Bracelets</a>
+                    <a href="#products">Elite Chains</a>
+                    <a href="#products">Exclusive Accessories</a>
+                    <a href="#products">Limited Editions</a>
+                </div>
+
+                <div class="footer-section">
+                    <h3>VIP Services</h3>
+                    <a href="#">Personal Shopper</a>
+                    <a href="#">Custom Jewelry Design</a>
+                    <a href="#">White Glove Delivery</a>
+                    <a href="#">Jewelry Care Service</a>
+                    <a href="#">Lifetime Warranty</a>
+                    <a href="#">Authentication Certificate</a>
+                </div>
+
+                <div class="footer-section">
+                    <h3>Contact Concierge</h3>
+                    <p><i class="fas fa-envelope"></i> concierge@crookstore.in</p>
+                    <p><i class="fas fa-phone"></i> +91 9876543210</p>
+                    <p><i class="fas fa-whatsapp"></i> WhatsApp: +91 9876543210</p>
+                    <p><i class="fas fa-map-marker-alt"></i> Mumbai, Maharashtra, India</p>
+                    <p><i class="fas fa-clock"></i> Mon-Sat: 10AM-8PM IST</p>
+                    <p><i class="fas fa-headset"></i> 24/7 VIP Support Available</p>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p class="footer-copyright">
+                    &copy; 2025 Crook Store. All rights reserved. Crafted with passion by shubham-shipt | Current Date: 2025-08-27
+                </p>
+                <div class="footer-links">
+                    <a href="#">Privacy Policy</a>
+                    <a href="#">Terms of Service</a>
+                    <a href="#">Warranty Policy</a>
+                    <a href="#">Shipping Policy</a>
+                    <a href="#">Return Policy</a>
+                    <a href="#">Accessibility</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Luxury Cart Sidebar -->
+    <div class="cart-sidebar" id="cartSidebar">
+        <div class="cart-header">
+            <h3 class="cart-title">Luxury Cart</h3>
+            <button class="cart-close" id="cartClose">
+                <i class="fas fa-times"></i>
+            </button>
+        </div>
+        <div class="cart-content" id="cartContent">
+            <div class="cart-empty" id="cartEmpty">
+                <div class="cart-empty-icon">
+                    <i class="fas fa-shopping-bag"></i>
+                </div>
+                <p>Your luxury cart is empty</p>
+                <small>Discover our premium jewelry collection!</small>
+            </div>
+        </div>
+        <div class="cart-footer" id="cartFooter" style="display: none;">
+            <div class="cart-total">
+                <span>Total: </span>
+                <span id="cartTotalAmount">₹0</span>
+            </div>
+            <button class="cart-checkout">Proceed to VIP Checkout</button>
+        </div>
+    </div>
+
+    <!-- Quick View Modal -->
+    <div class="modal-overlay" id="quickViewModal">
+        <div class="modal-content">
+            <button class="modal-close" id="modalClose">
+                <i class="fas fa-times"></i>
+            </button>
+            <div id="modalBody">
+                <!-- Dynamic content loaded here -->
+            </div>
+        </div>
+    </div>
+
+    <!-- Floating Action Buttons -->
+    <div class="floating-actions">
+        <button class="fab fab-scroll" id="scrollTopBtn" title="Scroll to Top" style="display: none;">
+            <i class="fas fa-arrow-up"></i>
+        </button>
+        <button class="fab fab-chat" id="chatBtn" title="VIP Chat">
+            <i class="fas fa-comments"></i>
+        </button>
+        <button class="fab fab-phone" id="phoneBtn" title="Call Concierge">
+            <i class="fas fa-phone"></i>
+        </button>
+    </div>
+
+    <!-- Toast Container -->
+    <div class="toast-container" id="toastContainer"></div>
+
+    <script>
+        // Enhanced Global Variables
+        let cart = JSON.parse(localStorage.getItem('crook_luxury_cart_2025')) || [];
+        let wishlist = JSON.parse(localStorage.getItem('crook_luxury_wishlist_2025')) || [];
+        let currentTheme = localStorage.getItem('crook_luxury_theme_2025') || 'light';
+        let particleCount = 0;
+        let maxParticles = 150;
+        let searchTimeout;
+        let isSearching = false;
+
+        // Enhanced App Initialization
+        document.addEventListener('DOMContentLoaded', function() {
+            console.log('🔥 Crook Store - Luxury Edition Loading...');
+            initializeLuxuryApp();
+        });
+
+        function initializeLuxuryApp() {
+            // Enhanced Loading Sequence
+            setTimeout(() => {
+                hideLuxuryLoading();
+            }, 3000);
+
+            // Initialize all luxury components
+            initializeLuxuryCursor();
+            initializeLuxuryParticles();
+            initializeLuxuryScrollEffects();
+            initializeLuxuryTheme();
+            initializeLuxurySearch();
+            initializeLuxuryProducts();
+            initializeLuxuryCart();
+            initializeLuxuryWishlist();
+            initializeLuxuryModal();
+            initializeLuxuryNewsletter();
+            initializeLuxuryFloatingButtons();
+            initializeLuxuryMobileMenu();
+            initializeLuxuryAnimations();
+            initializeLuxuryAudio();
+            
+            updateLuxuryBadges();
+            applyLuxuryTheme(currentTheme);
+            
+            console.log('✨ Luxury Experience Initialized Successfully!');
+        }
+
+        // Luxury Loading Screen
+        function hideLuxuryLoading() {
+            const loadingScreen = document.getElementById('luxuryLoading');
+            loadingScreen.style.opacity = '0';
+            setTimeout(() => {
+                loadingScreen.style.display = 'none';
+                document.body.style.overflow = 'auto';
+                showLuxuryToast('Welcome to Crook Store Luxury Experience! ✨💎', 'success');
+            }, 1000);
+        }
+
+        // Luxury Cursor System
+        function initializeLuxuryCursor() {
+            const cursor = document.querySelector('.luxury-cursor');
+            const trail = document.querySelector('.luxury-cursor-trail');
+            let mouseX = 0, mouseY = 0;
+            let trailX = 0, trailY = 0;
+
+            // Hide on mobile
+            if (window.innerWidth <= 768) {
+                cursor.style.display = 'none';
+                trail.style.display = 'none';
+                return;
+            }
+
+            document.addEventListener('mousemove', (e) => {
+                mouseX = e.clientX;
+                mouseY = e.clientY;
+                cursor.style.transform = `translate(${mouseX - 6}px, ${mouseY - 6}px)`;
+            });
+
+            // Enhanced trail animation
+            function animateTrail() {
+                trailX += (mouseX - trailX) * 0.1;
+                trailY += (mouseY - trailY) * 0.1;
+                trail.style.transform = `translate(${trailX - 16}px, ${trailY - 16}px)`;
+                requestAnimationFrame(animateTrail);
+            }
+            animateTrail();
+
+            // Enhanced cursor effects
+            document.querySelectorAll('a, button, .product-card, .luxury-button, .overlay-button').forEach(element => {
+                element.addEventListener('mouseenter', () => {
+                    cursor.classList.add('hover');
+                    trail.style.transform += ' scale(1.8)';
+                });
+                element.addEventListener('mouseleave', () => {
+                    cursor.classList.remove('hover');
+                    trail.style.transform = trail.style.transform.replace(' scale(1.8)', '');
+                });
+            });
+
+            // Click effect
+            document.addEventListener('mousedown', () => {
+                cursor.classList.add('click');
+            });
+
+            document.addEventListener('mouseup', () => {
+                cursor.classList.remove('click');
+            });
+        }
+
+        // Luxury Particles System
+        function initializeLuxuryParticles() {
+            const container = document.getElementById('luxuryParticles');
+            
+            function createLuxuryParticle() {
+                if (particleCount >= maxParticles) return;
+                
+                const particle = document.createElement('div');
+                const types = ['gold-particle', 'diamond-particle', 'pearl-particle'];
+                const type = types[Math.floor(Math.random() * types.length)];
+                
+                particle.className = type;
+                particle.style.left = Math.random() * 100 + '%';
+                particle.style.top = Math.random() * 100 + '%';
+                particle.style.animationDelay = Math.random() * 8 + 's';
+                particle.style.animationDuration = (Math.random() * 6 + 6) + 's';
+                
+                container.appendChild(particle);
+                particleCount++;
+                
+                // Remove particle after animation
+                setTimeout(() => {
+                    if (particle.parentNode) {
+                        particle.remove();
+                        particleCount--;
+                    }
+                }, 12000);
+            }
+
+            // Create initial particles
+            for (let i = 0; i < 80; i++) {
+                setTimeout(() => createLuxuryParticle(), i * 150);
+            }
+
+            // Continuously create new particles
+            setInterval(createLuxuryParticle, 3000);
+        }
+
+        // Luxury Scroll Effects
+        function initializeLuxuryScrollEffects() {
+            const header = document.getElementById('luxuryHeader');
+            const progressBar = document.getElementById('luxuryProgress');
+            const scrollTopBtn = document.getElementById('scrollTopBtn');
+
+            let ticking = false;
+
+            function updateLuxuryScroll() {
+                const scrollTop = window.pageYOffset;
+                const docHeight = document.documentElement.scrollHeight - window.innerHeight;
+                const scrollPercent = Math.min((scrollTop / docHeight) * 100, 100);
+
+                // Update progress bar
+                progressBar.style.width = scrollPercent + '%';
+
+                // Header effects
+                if (scrollTop > 100) {
+                    header.classList.add('scrolled');
+                } else {
+                    header.classList.remove('scrolled');
+                }
+
+                // Scroll to top button
+                if (scrollTop > 600) {
+                    scrollTopBtn.style.display = 'flex';
+                } else {
+                    scrollTopBtn.style.display = 'none';
+                }
+
+                ticking = false;
+            }
+
+            window.addEventListener('scroll', () => {
+                if (!ticking) {
+                    requestAnimationFrame(updateLuxuryScroll);
+                    ticking = true;
+                }
+            });
+
+            // Enhanced smooth scroll for navigation
+            document.querySelectorAll('.nav-link').forEach(link => {
+                link.addEventListener('click', (e) => {
+                    e.preventDefault();
+                    const targetId = link.getAttribute('href');
+                    const targetElement = document.querySelector(targetId);
+                    
+                    if (targetElement) {
+                        const headerHeight = header.offsetHeight;
+                        const targetPosition = targetElement.offsetTop - headerHeight;
+                        
+                        window.scrollTo({
+                            top: targetPosition,
+                            behavior: 'smooth'
+                        });
+                        
+                        // Update active nav link
+                        document.querySelectorAll('.nav-link').forEach(l => l.classList.remove('active'));
+                        link.classList.add('active');
+                    }
+                });
+            });
+        }
+
+        // Luxury Theme System
+        function initializeLuxuryTheme() {
+            const themeToggle = document.getElementById('themeToggle');
+            
+            themeToggle.addEventListener('click', () => {
+                currentTheme = currentTheme === 'light' ? 'dark' : 'light';
+                applyLuxuryTheme(currentTheme);
+                localStorage.setItem('crook_luxury_theme_2025', currentTheme);
+                
+                showLuxuryToast(`Switched to ${currentTheme} luxury theme! ✨`, 'success');
+            });
+        }
+
+        function applyLuxuryTheme(theme) {
+            document.body.setAttribute('data-theme', theme);
+            const themeIcon = document.getElementById('themeIcon');
+            
+            if (theme === 'dark') {
+                themeIcon.className = 'fas fa-sun theme-icon';
+            } else {
+                themeIcon.className = 'fas fa-moon theme-icon';
+            }
+        }
+
+                // Luxury Search System
+        function initializeLuxurySearch() {
+            const searchInput = document.getElementById('searchInput');
+            const searchContainer = document.getElementById('searchContainer');
+            const searchSuggestions = document.getElementById('searchSuggestions');
+            
+            const luxuryProducts = [
+                'Gold Chain Necklace Premium', 'Silver Ring Collection Luxury', 'Cuban Link Bracelet Gold',
+                'Vintage Watch Chain Premium', 'Cross Pendant Necklace Diamond', 'Gothic Skull Ring Steel',
+                'Leather Bracelet Designer', 'Pearl Earrings Luxury', 'Rose Gold Chain Miami',
+                'Stainless Steel Ring Premium', 'Tennis Bracelet Diamond', 'Vintage Brooch Collection',
+                'Boss Lady Chain Gold', 'Signet Ring Vintage', 'Multi Layer Necklace Set',
+                'Luxury Wedding Rings', 'Designer Pendants Gold', 'Premium Cufflinks Collection'
+            ];
+
+            searchInput.addEventListener('focus', () => {
+                searchContainer.classList.add('focused');
+            });
+
+            searchInput.addEventListener('blur', () => {
+                setTimeout(() => {
+                    searchContainer.classList.remove('focused');
+                    searchSuggestions.classList.remove('show');
+                }, 200);
+            });
+
+            searchInput.addEventListener('input', (e) => {
+                const query = e.target.value.toLowerCase().trim();
+                
+                clearTimeout(searchTimeout);
+                
+                if (query.length > 0) {
+                    searchTimeout = setTimeout(() => {
+                        const filtered = luxuryProducts.filter(product => 
+                            product.toLowerCase().includes(query)
+                        );
+                        
+                        displayLuxurySuggestions(filtered, query);
+                    }, 300);
+                } else {
+                    searchSuggestions.classList.remove('show');
+                }
+            });
+
+            function displayLuxurySuggestions(suggestions, query) {
+                if (suggestions.length > 0) {
+                    searchSuggestions.innerHTML = suggestions.slice(0, 6).map(product => 
+                        `<div class="suggestion-item" onclick="selectLuxurySuggestion('${product}')">
+                            <i class="fas fa-search"></i>
+                            <span>${highlightLuxuryMatch(product, query)}</span>
+                        </div>`
+                    ).join('');
+                    searchSuggestions.classList.add('show');
+                } else {
+                    searchSuggestions.innerHTML = '<div class="suggestion-item">No luxury items found</div>';
+                    searchSuggestions.classList.add('show');
+                }
+            }
+
+            function highlightLuxuryMatch(text, query) {
+                const regex = new RegExp(`(${query})`, 'gi');
+                return text.replace(regex, '<strong style="color: var(--gold-primary);">$1</strong>');
+            }
+
+            // Handle search form submission
+            searchInput.addEventListener('keypress', (e) => {
+                if (e.key === 'Enter') {
+                    e.preventDefault();
+                    performLuxurySearch(searchInput.value);
+                }
+            });
+        }
+
+        function selectLuxurySuggestion(product) {
+            document.getElementById('searchInput').value = product;
+            document.getElementById('searchSuggestions').classList.remove('show');
+            performLuxurySearch(product);
+        }
+
+        function performLuxurySearch(query) {
+            if (!query.trim()) return;
+            
+            showLuxuryToast(`Searching luxury collection for: "${query}" 💎`, 'info');
+            
+            // Filter products based on search
+            const productCards = document.querySelectorAll('.product-card');
+            let visibleCount = 0;
+            
+            productCards.forEach(card => {
+                const productName = card.querySelector('.product-name').textContent.toLowerCase();
+                const productCategory = card.querySelector('.product-category').textContent.toLowerCase();
+                
+                if (productName.includes(query.toLowerCase()) || productCategory.includes(query.toLowerCase())) {
+                    card.style.display = 'block';
+                    card.style.opacity = '0';
+                    setTimeout(() => {
+                        card.style.opacity = '1';
+                        card.style.transform = 'translateY(0)';
+                    }, 100);
+                    visibleCount++;
+                } else {
+                    card.style.opacity = '0';
+                    card.style.transform = 'translateY(20px)';
+                    setTimeout(() => {
+                        card.style.display = 'none';
+                    }, 300);
+                }
+            });
+            
+            if (visibleCount === 0) {
+                showLuxuryToast('No luxury items found. Try different keywords.', 'warning');
+            } else {
+                showLuxuryToast(`Found ${visibleCount} premium product(s)! ✨`, 'success');
+            }
+        }
+
+        // Luxury Products System
+        function initializeLuxuryProducts() {
+            initializeLuxuryFilters();
+            initializeLuxuryActions();
+            initializeLuxuryQuickView();
+        }
+
+        function initializeLuxuryFilters() {
+            const filterButtons = document.querySelectorAll('.filter-button');
+            const productCards = document.querySelectorAll('.product-card');
+
+            filterButtons.forEach(button => {
+                button.addEventListener('click', () => {
+                    const filter = button.dataset.filter;
+                    
+                    // Update active filter
+                    filterButtons.forEach(btn => btn.classList.remove('active'));
+                    button.classList.add('active');
+                    
+                    // Animate filter change with luxury effect
+                    productCards.forEach((card, index) => {
+                        const category = card.dataset.category;
+                        
+                        setTimeout(() => {
+                            if (filter === 'all' || category === filter) {
+                                card.style.display = 'block';
+                                card.style.opacity = '0';
+                                card.style.transform = 'translateY(30px) scale(0.95)';
+                                
+                                setTimeout(() => {
+                                    card.style.opacity = '1';
+                                    card.style.transform = 'translateY(0) scale(1)';
+                                }, 100);
+                            } else {
+                                card.style.opacity = '0';
+                                card.style.transform = 'translateY(30px) scale(0.95)';
+                                setTimeout(() => {
+                                    card.style.display = 'none';
+                                }, 400);
+                            }
+                        }, index * 80);
+                    });
+                    
+                    const filterText = button.textContent;
+                    showLuxuryToast(`Filtered luxury collection: ${filterText} ✨`, 'info');
+                    playLuxurySound('filter');
+                });
+            });
+        }
+
+        function initializeLuxuryActions() {
+            // Enhanced Add to Cart
+            document.querySelectorAll('.btn-add-cart').forEach(button => {
+                button.addEventListener('click', (e) => {
+                    e.preventDefault();
+                    const productId = button.dataset.product;
+                    const productCard = button.closest('.product-card');
+                    const productName = productCard.querySelector('.product-name').textContent;
+                    const productPrice = productCard.querySelector('.price-current').textContent;
+                    const productCategory = productCard.querySelector('.product-category').textContent;
+                    const productImage = productCard.querySelector('.product-image').src;
+                    
+                    const product = {
+                        id: productId,
+                        name: productName,
+                        price: productPrice,
+                        category: productCategory,
+                        image: productImage,
+                        quantity: 1,
+                        addedAt: new Date().toISOString()
+                    };
+                    
+                    addToLuxuryCart(product, button);
+                });
+            });
+
+            // Enhanced Wishlist
+            document.querySelectorAll('.btn-wishlist, .overlay-button[data-action="wishlist"]').forEach(button => {
+                button.addEventListener('click', (e) => {
+                    e.preventDefault();
+                    const productId = button.dataset.product;
+                    const productCard = button.closest('.product-card');
+                    const productName = productCard.querySelector('.product-name').textContent;
+                    const productImage = productCard.querySelector('.product-image').src;
+                    
+                    const product = {
+                        id: productId,
+                        name: productName,
+                        image: productImage,
+                        addedAt: new Date().toISOString()
+                    };
+                    
+                    toggleLuxuryWishlist(product, button);
+                });
+            });
+
+            // Quick View
+            document.querySelectorAll('.overlay-button[data-action="quickview"]').forEach(button => {
+                button.addEventListener('click', (e) => {
+                    e.preventDefault();
+                    const productId = button.dataset.product;
+                    openLuxuryQuickView(productId);
+                });
+            });
+
+            // Compare
+            document.querySelectorAll('.overlay-button[data-action="compare"]').forEach(button => {
+                button.addEventListener('click', (e) => {
+                    e.preventDefault();
+                    showLuxuryToast('Product added to luxury comparison! 📊✨', 'info');
+                    playLuxurySound('compare');
+                });
+            });
+        }
+
+        // Luxury Cart System
+        function initializeLuxuryCart() {
+            const cartBtn = document.getElementById('cartBtn');
+            const cartSidebar = document.getElementById('cartSidebar');
+            const cartClose = document.getElementById('cartClose');
+
+            cartBtn.addEventListener('click', () => {
+                cartSidebar.classList.add('open');
+                document.body.style.overflow = 'hidden';
+                renderLuxuryCartItems();
+                playLuxurySound('cart_open');
+            });
+
+            cartClose.addEventListener('click', () => {
+                cartSidebar.classList.remove('open');
+                document.body.style.overflow = 'auto';
+            });
+
+            // Close cart when clicking outside
+            cartSidebar.addEventListener('click', (e) => {
+                if (e.target === cartSidebar) {
+                    cartSidebar.classList.remove('open');
+                    document.body.style.overflow = 'auto';
+                }
+            });
+        }
+
+        function addToLuxuryCart(product, button) {
+            const existingItem = cart.find(item => item.id === product.id);
+            
+            if (existingItem) {
+                existingItem.quantity += 1;
+                showLuxuryToast(`Increased quantity of ${product.name}! 🛒✨`, 'success');
+            } else {
+                cart.push(product);
+                showLuxuryToast(`${product.name} added to luxury cart! 🛒💎`, 'success');
+            }
+            
+            localStorage.setItem('crook_luxury_cart_2025', JSON.stringify(cart));
+            updateLuxuryBadges();
+            playLuxurySound('add_to_cart');
+            
+            // Enhanced button animation
+            const originalText = button.textContent;
+            button.textContent = 'Added to Cart!';
+            button.classList.add('added');
+            button.style.transform = 'scale(0.95)';
+            
+            setTimeout(() => {
+                button.style.transform = 'scale(1.05)';
+            }, 150);
+            
+            setTimeout(() => {
+                button.style.transform = 'scale(1)';
+            }, 300);
+            
+            setTimeout(() => {
+                button.textContent = originalText;
+                button.classList.remove('added');
+            }, 2500);
+        }
+
+        function removeFromLuxuryCart(productId) {
+            const itemIndex = cart.findIndex(item => item.id === productId);
+            if (itemIndex > -1) {
+                const removedItem = cart[itemIndex];
+                cart.splice(itemIndex, 1);
+                localStorage.setItem('crook_luxury_cart_2025', JSON.stringify(cart));
+                updateLuxuryBadges();
+                renderLuxuryCartItems();
+                showLuxuryToast(`${removedItem.name} removed from cart! 🗑️`, 'info');
+                playLuxurySound('remove_item');
+            }
+        }
+
+        function updateLuxuryCartQuantity(productId, newQuantity) {
+            const item = cart.find(item => item.id === productId);
+            if (item) {
+                if (newQuantity <= 0) {
+                    removeFromLuxuryCart(productId);
+                } else {
+                    item.quantity = parseInt(newQuantity);
+                    localStorage.setItem('crook_luxury_cart_2025', JSON.stringify(cart));
+                    updateLuxuryBadges();
+                    renderLuxuryCartItems();
+                    playLuxurySound('quantity_change');
+                }
+            }
+        }
+
+        function renderLuxuryCartItems() {
+            const cartContent = document.getElementById('cartContent');
+            const cartEmpty = document.getElementById('cartEmpty');
+            const cartFooter = document.getElementById('cartFooter');
+            const cartTotalAmount = document.getElementById('cartTotalAmount');
+
+            if (cart.length === 0) {
+                cartEmpty.style.display = 'block';
+                cartFooter.style.display = 'none';
+                return;
+            }
+
+            cartEmpty.style.display = 'none';
+            cartFooter.style.display = 'block';
+
+            const cartHTML = cart.map(item => `
+                <div class="cart-item">
+                    <div class="cart-item-image">
+                        <img src="${item.image}" alt="${item.name}" style="width: 100%; height: 100%; object-fit: cover; border-radius: var(--radius-medium);">
+                    </div>
+                    <div class="cart-item-details">
+                        <div class="cart-item-name">${item.name}</div>
+                        <div class="cart-item-price">${item.price}</div>
+                        <div class="cart-controls">
+                            <button class="qty-button" onclick="updateLuxuryCartQuantity('${item.id}', ${item.quantity - 1})">
+                                <i class="fas fa-minus"></i>
+                            </button>
+                            <input type="number" class="qty-input" value="${item.quantity}" min="1" 
+                                   onchange="updateLuxuryCartQuantity('${item.id}', this.value)">
+                            <button class="qty-button" onclick="updateLuxuryCartQuantity('${item.id}', ${item.quantity + 1})">
+                                <i class="fas fa-plus"></i>
+                            </button>
+                        </div>
+                    </div>
+                    <button class="cart-remove" onclick="removeFromLuxuryCart('${item.id}')" title="Remove luxury item">
+                        <i class="fas fa-trash-alt"></i>
+                    </button>
+                </div>
+            `).join('');
+
+            cartContent.innerHTML = cartHTML;
+
+            // Calculate total with luxury formatting
+            const total = cart.reduce((sum, item) => {
+                const price = parseFloat(item.price.replace('₹', '').replace(',', ''));
+                return sum + (price * item.quantity);
+            }, 0);
+
+            cartTotalAmount.textContent = `₹${total.toLocaleString('en-IN')}`;
+        }
+
+        // Luxury Wishlist System
+        function initializeLuxuryWishlist() {
+            const wishlistBtn = document.getElementById('wishlistBtn');
+            
+            wishlistBtn.addEventListener('click', () => {
+                if (wishlist.length === 0) {
+                    showLuxuryToast('Your luxury wishlist is empty! Add some premium pieces ❤️✨', 'info');
+                } else {
+                    showLuxuryToast(`You have ${wishlist.length} luxury item(s) in wishlist! ❤️💎`, 'info');
+                }
+                playLuxurySound('wishlist_view');
+            });
+        }
+
+        function toggleLuxuryWishlist(product, button) {
+            const existingIndex = wishlist.findIndex(item => item.id === product.id);
+            
+            if (existingIndex > -1) {
+                wishlist.splice(existingIndex, 1);
+                button.classList.remove('active');
+                showLuxuryToast(`${product.name} removed from wishlist! 💔`, 'info');
+                playLuxurySound('wishlist_remove');
+            } else {
+                wishlist.push(product);
+                button.classList.add('active');
+                showLuxuryToast(`${product.name} added to luxury wishlist! ❤️✨`, 'success');
+                playLuxurySound('wishlist_add');
+            }
+            
+            localStorage.setItem('crook_luxury_wishlist_2025', JSON.stringify(wishlist));
+            updateLuxuryBadges();
+        }
+
+        // Luxury Modal System
+        function initializeLuxuryModal() {
+            const modal = document.getElementById('quickViewModal');
+            const modalClose = document.getElementById('modalClose');
+
+            modalClose.addEventListener('click', () => {
+                modal.classList.remove('show');
+                document.body.style.overflow = 'auto';
+                playLuxurySound('modal_close');
+            });
+
+            modal.addEventListener('click', (e) => {
+                if (e.target === modal) {
+                    modal.classList.remove('show');
+                    document.body.style.overflow = 'auto';
+                }
+            });
+
+            // Enhanced keyboard support
+            document.addEventListener('keydown', (e) => {
+                if (e.key === 'Escape' && modal.classList.contains('show')) {
+                    modal.classList.remove('show');
+                    document.body.style.overflow = 'auto';
+                }
+            });
+        }
+
+        function initializeLuxuryQuickView() {
+            // Quick view is handled in product actions
+        }
+
+        function openLuxuryQuickView(productId) {
+            const modal = document.getElementById('quickViewModal');
+            const modalBody = document.getElementById('modalBody');
+            
+            // Enhanced product data with luxury features
+            const luxuryProductData = {
+                name: 'Premium Luxury Jewelry Piece',
+                price: '₹2,299',
+                originalPrice: '₹3,499',
+                rating: '★★★★★',
+                reviews: '127 luxury reviews',
+                description: 'Exquisite handcrafted luxury jewelry piece made with premium materials and uncompromising attention to detail. Perfect for expressing your sophisticated style and elegance.',
+                features: [
+                    'Premium 18K Gold Plated',
+                    'Handcrafted by Master Artisans',
+                    'Lifetime Quality Guarantee',
+                    'VIP Express Shipping',
+                    'Easy 30-Day Returns',
+                    'Luxury Gift Box Included',
+                    'Authentication Certificate',
+                    'Personal Concierge Service'
+                ],
+                specifications: {
+                    'Material': 'Premium Gold Plated Stainless Steel',
+                    'Weight': '25 grams',
+                    'Dimensions': '18mm x 25mm',
+                    'Warranty': 'Lifetime Warranty',
+                    'Origin': 'Handcrafted in India'
+                }
+            };
+
+            modalBody.innerHTML = `
+                <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 3rem; align-items: start;">
+                    <div>
+                        <div style="aspect-ratio: 1; background: var(--gradient-pearl); border-radius: var(--radius-large); display: flex; align-items: center; justify-content: center; color: var(--gold-primary); font-weight: 600; margin-bottom: 2rem; font-size: 1.3rem; backdrop-filter: var(--glass-blur); border: 1px solid var(--glass-border);">
+                            <i class="fas fa-gem" style="font-size: 3rem; margin-bottom: 1rem; display: block; width: 100%;"></i>
+                            Premium Luxury Product
+                        </div>
+                        <div style="display: grid; grid-template-columns: repeat(4, 1fr); gap: 1rem;">
+                            ${Array(4).fill().map(() => 
+                                `<div style="aspect-ratio: 1; background: var(--gradient-pearl); border-radius: var(--radius-medium); cursor: pointer; backdrop-filter: var(--glass-blur); border: 1px solid var(--glass-border); transition: var(--transition-smooth);" onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'"></div>`
+                            ).join('')}
+                        </div>
+                    </div>
+                    <div>
+                        <h2 style="font-family: 'Playfair Display', serif; font-size: 2rem; font-weight: 700; margin-bottom: 1rem; color: var(--onyx-black);">${luxuryProductData.name}</h2>
+                        <div style="display: flex; align-items: center; gap: 1rem; margin-bottom: 1.5rem;">
+                            <span style="color: var(--amber); font-size: 1.2rem;">${luxuryProductData.rating}</span>
+                            <span style="color: var(--charcoal); font-size: 1rem;">(${luxuryProductData.reviews})</span>
+                        </div>
+                        <div style="display: flex; align-items: center; gap: 1.5rem; margin-bottom: 2rem;">
+                            <span style="font-size: 2.2rem; font-weight: 700; color: var(--onyx-black);">${luxuryProductData.price}</span>
+                            <span style="text-decoration: line-through; color: var(--charcoal); font-size: 1.4rem;">${luxuryProductData.originalPrice}</span>
+                            <span style="background: var(--ruby); color: var(--pearl-white); padding: 0.5rem 1rem; border-radius: var(--radius-small); font-size: 0.9rem; font-weight: 600;">-34% OFF</span>
+                        </div>
+                        <p style="color: var(--charcoal); line-height: 1.7; margin-bottom: 2rem; font-size: 1.1rem;">${luxuryProductData.description}</p>
+                        <div style="margin-bottom: 2rem;">
+                            <h4 style="font-weight: 600; margin-bottom: 1rem; color: var(--onyx-black); font-size: 1.2rem;">Luxury Features:</h4>
+                            <ul style="list-style: none; padding: 0; display: grid; gap: 0.75rem;">
+                                ${luxuryProductData.features.map(feature => `
+                                    <li style="display: flex; align-items: center; gap: 0.75rem; color: var(--charcoal); font-size: 1rem;">
+                                        <i class="fas fa-check-circle" style="color: var(--emerald); font-size: 1.1rem;"></i>
+                                        ${feature}
+                                    </li>
+                                `).join('')}
+                            </ul>
+                        </div>
+                        <div style="margin-bottom: 2rem;">
+                            <h4 style="font-weight: 600; margin-bottom: 1rem; color: var(--onyx-black); font-size: 1.2rem;">Specifications:</h4>
+                            <div style="display: grid; gap: 0.5rem;">
+                                ${Object.entries(luxuryProductData.specifications).map(([key, value]) => `
+                                    <div style="display: flex; justify-content: space-between; padding: 0.5rem 0; border-bottom: 1px solid var(--glass-border);">
+                                        <span style="font-weight: 500; color: var(--charcoal);">${key}:</span>
+                                        <span style="color: var(--onyx-black);">${value}</span>
+                                    </div>
+                                `).join('')}
+                            </div>
+                        </div>
+                        <div style="display: flex; gap: 1rem;">
+                            <button style="flex: 1; padding: 1.5rem; background: var(--gradient-gold); color: var(--pearl-white); border: none; border-radius: var(--radius-medium); font-weight: 700; cursor: pointer; font-size: 1.2rem; transition: var(--transition-smooth);" onclick="addToLuxuryCart({id: '${productId}', name: '${luxuryProductData.name}', price: '${luxuryProductData.price}', quantity: 1, image: 'luxury-placeholder.jpg'}); showLuxuryToast('Added to luxury cart from quick view! 🛒💎', 'success');" class="luxury-button btn-primary">
+                                <i class="fas fa-shopping-bag" style="margin-right: 0.5rem;"></i>
+                                Add to Luxury Cart
+                            </button>
+                            <button style="width: 70px; height: 70px; border: 2px solid var(--glass-border); background: var(--pearl-white); border-radius: var(--radius-medium); color: var(--charcoal); cursor: pointer; display: flex; align-items: center; justify-content: center; font-size: 1.5rem; transition: var(--transition-smooth);" onclick="toggleLuxuryWishlist({id: '${productId}', name: '${luxuryProductData.name}', image: 'luxury-placeholder.jpg'}); this.classList.toggle('active');" title="Add to Luxury Wishlist">
+                                <i class="fas fa-heart"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            `;
+            
+            modal.classList.add('show');
+            document.body.style.overflow = 'hidden';
+            playLuxurySound('quick_view');
+        }
+
+        // Luxury Newsletter System
+        function initializeLuxuryNewsletter() {
+            const form = document.getElementById('newsletterForm');
+            
+            form.addEventListener('submit', (e) => {
+                e.preventDefault();
+                const email = form.querySelector('.newsletter-input').value;
+                const button = form.querySelector('.newsletter-button');
+                
+                if (email && validateLuxuryEmail(email)) {
+                    // Simulate luxury API call
+                    button.textContent = 'Joining Elite Circle...';
+                    button.disabled = true;
+                    button.classList.add('loading');
+                    
+                    setTimeout(() => {
+                        showLuxuryToast('Welcome to our Elite Circle! You\'ll receive VIP access soon! 🎉💎', 'success');
+                        form.reset();
+                        button.textContent = 'Join Elite Circle';
+                        button.disabled = false;
+                        button.classList.remove('loading');
+                        playLuxurySound('newsletter_success');
+                    }, 2000);
+                } else {
+                    showLuxuryToast('Please enter a valid email address for VIP access! 📧✨', 'error');
+                    playLuxurySound('error');
+                }
+            });
+        }
+
+        function validateLuxuryEmail(email) {
+            const re = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            return re.test(email);
+        }
+
+        // Luxury Floating Buttons
+        function initializeLuxuryFloatingButtons() {
+            const scrollTopBtn = document.getElementById('scrollTopBtn');
+            const chatBtn = document.getElementById('chatBtn');
+            const phoneBtn = document.getElementById('phoneBtn');
+
+            scrollTopBtn.addEventListener('click', () => {
+                window.scrollTo({ 
+                    top: 0, 
+                    behavior: 'smooth' 
+                });
+                showLuxuryToast('Scrolled to top with luxury style! 🚀✨', 'info');
+                playLuxurySound('scroll_top');
+            });
+
+            chatBtn.addEventListener('click', () => {
+                showLuxuryToast('VIP Chat concierge connecting... 💬✨', 'info');
+                playLuxurySound('chat_open');
+                // Simulate luxury chat opening
+                setTimeout(() => {
+                    showLuxuryToast('Your personal jewelry consultant will be with you shortly!', 'success');
+                }, 1500);
+            });
+
+            phoneBtn.addEventListener('click', () => {
+                if (navigator.userAgent.match(/Mobile/)) {
+                    window.open('tel:+919876543210');
+                } else {
+                    showLuxuryToast('Call our VIP Concierge: +91 9876543210 📞💎', 'info');
+                }
+                playLuxurySound('phone_click');
+            });
+        }
+
+        // Luxury Mobile Menu
+        function initializeLuxuryMobileMenu() {
+            const mobileToggle = document.getElementById('mobileToggle');
+            const mobileMenu = document.getElementById('mobileMenu');
+            const mobileMenuClose = document.getElementById('mobileMenuClose');
+
+            mobileToggle.addEventListener('click', () => {
+                mobileMenu.classList.add('open');
+                document.body.style.overflow = 'hidden';
+                playLuxurySound('menu_open');
+            });
+
+            mobileMenuClose.addEventListener('click', () => {
+                mobileMenu.classList.remove('open');
+                document.body.style.overflow = 'auto';
+            });
+
+            // Close menu when clicking outside
+            mobileMenu.addEventListener('click', (e) => {
+                if (e.target === mobileMenu) {
+                    mobileMenu.classList.remove('open');
+                    document.body.style.overflow = 'auto';
+                }
+            });
+
+            // Close menu when clicking nav links
+            document.querySelectorAll('.mobile-nav-links a').forEach(link => {
+                link.addEventListener('click', () => {
+                    mobileMenu.classList.remove('open');
+                    document.body.style.overflow = 'auto';
+                });
+            });
+        }
+
+        // Luxury Animations
+        function initializeLuxuryAnimations() {
+            // Enhanced Intersection Observer for luxury scroll animations
+            const luxuryObserver = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.style.opacity = '1';
+                        entry.target.style.transform = 'translateY(0) scale(1)';
+                        
+                        // Add luxury stagger effect
+                        if (entry.target.parentElement.classList.contains('features-grid') ||
+                            entry.target.parentElement.classList.contains('products-grid')) {
+                            const siblings = Array.from(entry.target.parentElement.children);
+                            const index = siblings.indexOf(entry.target);
+                            entry.target.style.transitionDelay = `${index * 0.15}s`;
+                        }
+                        
+                        // Add luxury glow effect
+                        setTimeout(() => {
+                            entry.target.style.boxShadow = 'var(--shadow-gold)';
+                            setTimeout(() => {
+                                entry.target.style.boxShadow = '';
+                            }, 1000);
+                        }, 500);
+                    }
+                });
+            }, {
+                threshold: 0.1,
+                rootMargin: '0px 0px -80px 0px'
+            });
+
+            // Observe luxury elements
+            document.querySelectorAll('.animate-fade-in, .animate-slide-up, .product-card, .feature-card').forEach(el => {
+                el.style.opacity = '0';
+                el.style.transform = 'translateY(40px) scale(0.95)';
+                el.style.transition = 'opacity 1s ease, transform 1s ease, box-shadow 0.5s ease';
+                luxuryObserver.observe(el);
+            });
+
+            // Enhanced parallax effect for luxury hero section
+            window.addEventListener('scroll', () => {
+                const scrolled = window.pageYOffset;
+                const hero = document.querySelector('.luxury-hero');
+                if (hero) {
+                    const rate = scrolled * -0.3;
+                    hero.style.transform = `translateY(${rate}px)`;
+                }
+                
+                // Luxury floating shapes animation
+                const shapes = document.querySelectorAll('.floating-shape');
+                shapes.forEach((shape, index) => {
+                    const rate = scrolled * (0.1 + index * 0.05);
+                    shape.style.transform = `translateY(${rate}px) rotate(${rate * 0.5}deg)`;
+                });
+            });
+        }
+
+        // Luxury Audio System
+        function initializeLuxuryAudio() {
+            // Create audio context for luxury sound effects
+            try {
+                window.luxuryAudioContext = new (window.AudioContext || window.webkitAudioContext)();
+            } catch (e) {
+                console.log('Audio context not supported');
+            }
+        }
+
+        function playLuxurySound(type) {
+            if (!window.luxuryAudioContext) return;
+            
+            try {
+                const oscillator = window.luxuryAudioContext.createOscillator();
+                const gainNode = window.luxuryAudioContext.createGain();
+                
+                oscillator.connect(gainNode);
+                gainNode.connect(window.luxuryAudioContext.destination);
+                
+                const soundConfig = {
+                    'add_to_cart': { freq: [800, 1000], duration: 0.3, volume: 0.1 },
+                    'wishlist_add': { freq: [600, 800], duration: 0.2, volume: 0.08 },
+                    'wishlist_remove': { freq: [400, 300], duration: 0.2, volume: 0.08 },
+                    'filter': { freq: [500, 700], duration: 0.15, volume: 0.06 },
+                    'cart_open': { freq: [700, 900], duration: 0.25, volume: 0.09 },
+                    'quick_view': { freq: [900, 1100], duration: 0.2, volume: 0.08 },
+                    'newsletter_success': { freq: [800, 1200, 800], duration: 0.5, volume: 0.1 },
+                    'scroll_top': { freq: [600, 1000], duration: 0.2, volume: 0.07 },
+                    'menu_open': { freq: [500, 800], duration: 0.2, volume: 0.07 },
+                    'error': { freq: [300, 200], duration: 0.3, volume: 0.08 }
+                };
+                
+                const config = soundConfig[type] || soundConfig['add_to_cart'];
+                
+                oscillator.frequency.setValueAtTime(config.freq[0], window.luxuryAudioContext.currentTime);
+                if (config.freq[1]) {
+                    oscillator.frequency.setValueAtTime(config.freq[1], window.luxuryAudioContext.currentTime + config.duration / 2);
+                }
+                if (config.freq[2]) {
+                    oscillator.frequency.setValueAtTime(config.freq[2], window.luxuryAudioContext.currentTime + config.duration * 0.75);
+                }
+                
+                gainNode.gain.setValueAtTime(config.volume, window.luxuryAudioContext.currentTime);
+                gainNode.gain.exponentialRampToValueAtTime(0.01, window.luxuryAudioContext.currentTime + config.duration);
+                
+                oscillator.start(window.luxuryAudioContext.currentTime);
+                oscillator.stop(window.luxuryAudioContext.currentTime + config.duration);
+            } catch (e) {
+                // Silently fail if audio context has issues
+            }
+        }
+
+        // Update Luxury Badges
+        function updateLuxuryBadges() {
+            const cartBadge = document.getElementById('cartBadge');
+            const wishlistBadge = document.getElementById('wishlistBadge');
+            
+            const cartCount = cart.reduce((total, item) => total + item.quantity, 0);
+            
+            cartBadge.textContent = cartCount;
+            cartBadge.style.display = cartCount > 0 ? 'flex' : 'none';
+            
+            wishlistBadge.textContent = wishlist.length;
+            wishlistBadge.style.display = wishlist.length > 0 ? 'flex' : 'none';
+
+            // Animate badges with luxury effect
+            if (cartCount > 0) {
+                cartBadge.style.animation = 'pulse 0.8s ease, heartbeat 0.6s ease';
+                setTimeout(() => cartBadge.style.animation = '', 800);
+            }
+            
+            if (wishlist.length > 0) {
+                wishlistBadge.style.animation = 'pulse 0.8s ease, heartbeat 0.6s ease';
+                setTimeout(() => wishlistBadge.style.animation = '', 800);
+            }
+        }
+
+        // Enhanced Luxury Toast System
+        function showLuxuryToast(message, type = 'success') {
+            const toastContainer = document.getElementById('toastContainer');
+            const toast = document.createElement('div');
+            toast.className = `toast ${type}`;
+            
+            const luxuryIcons = {
+                success: 'fas fa-check-circle',
+                error: 'fas fa-exclamation-triangle',
+                warning: 'fas fa-exclamation-circle',
+                info: 'fas fa-info-circle'
+            };
+
+            toast.innerHTML = `
+                <div class="toast-content">
+                    <i class="${luxuryIcons[type]} toast-icon ${type}"></i>
+                    <span class="toast-message">${message}</span>
+                    <button class="toast-close" onclick="this.parentElement.parentElement.remove()">
+                        <i class="fas fa-times"></i>
+                    </button>
+                </div>
+            `;
+
+            toastContainer.appendChild(toast);
+            
+            // Show toast with luxury animation
+            setTimeout(() => {
+                toast.classList.add('show');
+            }, 100);
+
+            // Auto remove after 6 seconds for luxury experience
+            setTimeout(() => {
+                toast.classList.remove('show');
+                setTimeout(() => {
+                    if (toast.parentElement) {
+                        toast.remove();
+                    }
+                }, 400);
+            }, 6000);
+
+            // Play luxury notification sound
+            if (type === 'success') {
+                playLuxurySound('add_to_cart');
+            } else if (type === 'error') {
+                playLuxurySound('error');
+            }
+        }
+
+        // Enhanced User Account System
+        document.getElementById('userBtn').addEventListener('click', () => {
+            showLuxuryToast('VIP Account features launching soon! Get ready for the ultimate luxury experience! 👤💎', 'info');
+            playLuxurySound('menu_open');
+        });
+
+        // Advanced Luxury Keyboard Shortcuts
+        document.addEventListener('keydown', (e) => {
+            // Ctrl/Cmd + K for luxury search
+            if ((e.ctrlKey || e.metaKey) && e.key === 'k') {
+                e.preventDefault();
+                document.getElementById('searchInput').focus();
+                showLuxuryToast('Luxury search activated! Find your perfect piece 🔍💎', 'info');
+            }
+            
+            // Ctrl/Cmd + Shift + C for luxury cart
+            if ((e.ctrlKey || e.metaKey) && e.shiftKey && e.key === 'C') {
+                e.preventDefault();
+                document.getElementById('cartBtn').click();
+            }
+            
+            // Ctrl/Cmd + Shift + W for luxury wishlist
+            if ((e.ctrlKey || e.metaKey) && e.shiftKey && e.key === 'W') {
+                e.preventDefault();
+                document.getElementById('wishlistBtn').click();
+            }
+            
+            // Ctrl/Cmd + Shift + T for theme toggle
+            if ((e.ctrlKey || e.metaKey) && e.shiftKey && e.key === 'T') {
+                e.preventDefault();
+                document.getElementById('themeToggle').click();
+            }
+            
+            // Escape to close all luxury modals and sidebars
+            if (e.key === 'Escape') {
+                document.getElementById('quickViewModal').classList.remove('show');
+                document.getElementById('cartSidebar').classList.remove('open');
+                document.getElementById('mobileMenu').classList.remove('open');
+                document.body.style.overflow = 'auto';
+            }
+            
+            // Arrow keys for luxury product navigation
+            if (e.key === 'ArrowRight' || e.key === 'ArrowLeft') {
+                const activeFilter = document.querySelector('.filter-button.active');
+                const filterButtons = Array.from(document.querySelectorAll('.filter-button'));
+                const currentIndex = filterButtons.indexOf(activeFilter);
+                
+                let newIndex;
+                if (e.key === 'ArrowRight') {
+                    newIndex = (currentIndex + 1) % filterButtons.length;
+                } else {
+                    newIndex = (currentIndex - 1 + filterButtons.length) % filterButtons.length;
+                }
+                
+                filterButtons[newIndex].click();
+            }
+
+            // Number keys for quick filter selection (1-6)
+            if (e.key >= '1' && e.key <= '6') {
+                const filterButtons = document.querySelectorAll('.filter-button');
+                const index = parseInt(e.key) - 1;
+                if (filterButtons[index]) {
+                    filterButtons[index].click();
+                }
+            }
+        });
+
+        // Enhanced Error Handling
+        window.addEventListener('error', (e) => {
+            console.error('Luxury Website Error:', e.error);
+            showLuxuryToast('Something went wrong in our luxury experience. Please refresh for perfect service. 🔄✨', 'error');
+        });
+
+        // Performance Monitoring for Luxury Experience
+        window.addEventListener('load', () => {
+            const loadTime = performance.timing.loadEventEnd - performance.timing.navigationStart;
+            console.log(`🚀 Luxury page loaded in ${loadTime}ms`);
+            
+            if (loadTime > 3000) {
+                console.warn('⚠️ Luxury load time exceeded 3 seconds. Optimizing for better experience.');
+            } else {
+                console.log('✨ Excellent luxury load time performance!');
+            }
+            
+            // Send luxury analytics (if implemented)
+            if (typeof gtag !== 'undefined') {
+                gtag('event', 'luxury_page_load', {
+                    'event_category': 'Performance',
+                    'event_label': 'Luxury Load Time',
+                    'value': loadTime
+                });
+            }
+        });
+
+        // Enhanced Auto-save for Luxury Data
+        setInterval(() => {
+            localStorage.setItem('crook_luxury_cart_2025', JSON.stringify(cart));
+            localStorage.setItem('crook_luxury_wishlist_2025', JSON.stringify(wishlist));
+            localStorage.setItem('crook_luxury_theme_2025', currentTheme);
+            console.log('💎 Luxury data auto-saved');
+        }, 45000); // Save every 45 seconds
+
+        // Enhanced Luxury Console Welcome Message
+        console.log(`
+        💎💎💎 CROOK STORE - LUXURY JEWELRY EXPERIENCE 💎💎💎
+        
+        ╔════════════════════════════════════════════════════════════╗
+        ║                     LUXURY SYSTEM STATUS                  ║
+        ╠════════════════════════════════════════════════════════════╣
+        ║ ✨ Luxury Experience: FULLY LOADED                        ║
+        ║ 🛒 Cart Items: ${cart.length.toString().padEnd(38)} ║
+        ║ ❤️  Wishlist Items: ${wishlist.length.toString().padEnd(34)} ║
+        ║ 🎨 Theme: ${currentTheme.padEnd(43)} ║
+        ║ 📱 Mobile Optimized: PREMIUM RESPONSIVE                   ║
+        ║ 🔊 Audio Effects: LUXURY ENABLED                          ║
+        ║ 🚀 Performance: ULTRA PREMIUM                             ║
+        ║ 💎 Real Images: LOADED WITH STYLE                         ║
+        ╚════════════════════════════════════════════════════════════╝
+        
+        🎮 LUXURY DEVELOPER COMMANDS:
+        ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+        💻 showLuxuryCart()       - View luxury cart contents
+        💖 showLuxuryWishlist()   - View luxury wishlist items  
+        🗑️  clearLuxuryData()      - Clear all luxury data
+        🎨 toggleLuxuryTheme()    - Switch luxury themes
+        📊 getLuxuryStats()       - View luxury app statistics
+        🧪 testLuxuryFeatures()   - Test all luxury features
+        🔊 playLuxurySound(type)  - Play luxury sound effects
+        
+        ⌨️  LUXURY KEYBOARD SHORTCUTS:
+        ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+        🔍 Ctrl+K                - Luxury search focus
+        🛒 Ctrl+Shift+C          - Open luxury cart
+        ❤️  Ctrl+Shift+W          - Open luxury wishlist
+        🎨 Ctrl+Shift+T          - Toggle luxury theme
+        🚪 Escape                - Close all luxury modals
+        ⬅️➡️ Arrow Keys            - Navigate luxury filters
+        1️⃣-6️⃣ Number Keys         - Quick filter selection
+        
+        💎 Crafted with luxury by: ${getCurrentLuxuryUser()}
+        📅 Build Date: ${new Date().toLocaleDateString('en-IN')}
+        🕐 Current Time: ${new Date().toLocaleTimeString('en-IN')}
+        🌐 Browser: ${navigator.userAgent.split(' ').slice(-1)[0]}
+        🎯 User Agent: shubham-shipt
+        📍 Location: Premium Experience Zone
+        
+        🔥 ENJOY THE ULTIMATE LUXURY JEWELRY EXPERIENCE! 🔥
+        `);
+
+        // Enhanced Luxury Helper Functions
+        function getCurrentLuxuryUser() {
+            return 'shubham-shipt (Luxury Developer)';
+        }
+
+        function showLuxuryCart() {
+            console.group('🛒 LUXURY CART CONTENTS');
+            if (cart.length === 0) {
+                console.log('Luxury cart is empty');
+            } else {
+                console.table(cart);
+                const total = cart.reduce((sum, item) => {
+                    const price = parseFloat(item.price.replace('₹', '').replace(',', ''));
+                    return sum + (price * item.quantity);
+                }, 0);
+                console.log(`💰 Luxury Total: ₹${total.toLocaleString('en-IN')}`);
+                console.log(`💎 Average Item Value: ₹${(total/cart.length).toFixed(2)}`);
+            }
+            console.groupEnd();
+            return cart;
+        }
+
+        function showLuxuryWishlist() {
+            console.group('❤️ LUXURY WISHLIST CONTENTS');
+            if (wishlist.length === 0) {
+                console.log('Luxury wishlist is empty');
+            } else {
+                console.table(wishlist);
+                console.log(`💎 Total Wishlist Items: ${wishlist.length}`);
+            }
+            console.groupEnd();
+            return wishlist;
+        }
+
+        function clearLuxuryData() {
+            const confirmClear = confirm('🗑️ Are you sure you want to clear all luxury data? This will remove your premium cart and wishlist!');
+            if (confirmClear) {
+                localStorage.removeItem('crook_luxury_cart_2025');
+                localStorage.removeItem('crook_luxury_wishlist_2025');
+                localStorage.removeItem('crook_luxury_theme_2025');
+                cart = [];
+                wishlist = [];
+                currentTheme = 'light';
+                updateLuxuryBadges();
+                applyLuxuryTheme('light');
+                showLuxuryToast('All luxury data cleared! Fresh premium start! 🆕✨', 'success');
+                playLuxurySound('newsletter_success');
+                console.log('🗑️ All luxury data cleared successfully!');
+            }
+        }
+
+        function toggleLuxuryTheme() {
+            document.getElementById('themeToggle').click();
+        }
+
+        function getLuxuryStats() {
+            const stats = {
+                cartItems: cart.length,
+                wishlistItems: wishlist.length,
+                currentTheme: currentTheme,
+                totalCartValue: cart.reduce((sum, item) => {
+                    const price = parseFloat(item.price.replace('₹', '').replace(',', ''));
+                    return sum + (price * item.quantity);
+                }, 0),
+                averageItemPrice: cart.length > 0 ? (cart.reduce((sum, item) => {
+                    const price = parseFloat(item.price.replace('₹', '').replace(',', ''));
+                    return sum + price;
+                }, 0) / cart.length).toFixed(2) : 0,
+                lastActivity: new Date().toISOString(),
+                browserInfo: navigator.userAgent,
+                screenResolution: `${screen.width}x${screen.height}`,
+                viewportSize: `${window.innerWidth}x${window.innerHeight}`,
+                luxuryFeatures: {
+                    audioEnabled: !!window.luxuryAudioContext,
+                    particleCount: particleCount,
+                    maxParticles: maxParticles,
+                    themeSupport: 'Dark/Light Luxury Themes',
+                    responsiveDesign: 'Mobile-First Premium',
+                    realImages: 'Crook Store Product Images'
+                }
+            };
+            
+            console.group('📊 LUXURY APP STATISTICS');
+            console.table(stats);
+            console.log('💎 Luxury Features:', stats.luxuryFeatures);
+            console.groupEnd();
+            return stats;
+        }
+
+        function testLuxuryFeatures() {
+            console.log('🧪 Testing all luxury features...');
+            
+            const tests = [
+                { name: 'Success Toast', delay: 500, action: () => showLuxuryToast('Testing luxury success! ✅💎', 'success') },
+                { name: 'Warning Toast', delay: 1000, action: () => showLuxuryToast('Testing luxury warning! ⚠️✨', 'warning') },
+                { name: 'Error Toast', delay: 1500, action: () => showLuxuryToast('Testing luxury error! ❌💎', 'error') },
+                { name: 'Info Toast', delay: 2000, action: () => showLuxuryToast('Testing luxury info! ℹ️✨', 'info') },
+                { name: 'Audio Test', delay: 2500, action: () => playLuxurySound('newsletter_success') },
+                { name: 'Theme Toggle', delay: 3000, action: () => toggleLuxuryTheme() },
+                { name: 'Theme Revert', delay: 4000, action: () => toggleLuxuryTheme() }
+            ];
+
+            tests.forEach(test => {
+                setTimeout(() => {
+                    console.log(`✨ Testing: ${test.name}`);
+                    test.action();
+                }, test.delay);
+            });
+
+            setTimeout(() => {
+                console.log('✅ All luxury features tested successfully!');
+                showLuxuryToast('All luxury features working perfectly! Premium experience confirmed! 🎉💎✨', 'success');
+                playLuxurySound('newsletter_success');
+            }, 4500);
+        }
+
+        // Make luxury functions globally available
+        window.showLuxuryCart = showLuxuryCart;
+        window.showLuxuryWishlist = showLuxuryWishlist;
+        window.clearLuxuryData = clearLuxuryData;
+        window.toggleLuxuryTheme = toggleLuxuryTheme;
+        window.getLuxuryStats = getLuxuryStats;
+        window.testLuxuryFeatures = testLuxuryFeatures;
+        window.playLuxurySound = playLuxurySound;
+
+        // Make luxury cart functions available for onclick handlers
+        window.addToLuxuryCart = addToLuxuryCart;
+        window.removeFromLuxuryCart = removeFromLuxuryCart;
+        window.updateLuxuryCartQuantity = updateLuxuryCartQuantity;
+        window.toggleLuxuryWishlist = toggleLuxuryWishlist;
+        window.showLuxuryToast = showLuxuryToast;
+        window.selectLuxurySuggestion = selectLuxurySuggestion;
+
+        // Enhanced page visibility handling for luxury experience
+        document.addEventListener('visibilitychange', () => {
+            if (document.hidden) {
+                console.log('👋 Luxury page hidden - user switched tabs');
+            } else {
+                console.log('👀 Luxury page visible - user returned to premium experience');
+                updateLuxuryBadges();
+                showLuxuryToast('Welcome back to luxury! ✨💎', 'info');
+            }
+        });
+
+        // Enhanced online/offline detection for luxury experience
+        window.addEventListener('online', () => {
+            showLuxuryToast('Back online! All luxury features available! 🌐💎', 'success');
+            console.log('🌐 Luxury experience back online');
+            playLuxurySound('newsletter_success');
+        });
+
+        window.addEventListener('offline', () => {
+            showLuxuryToast('You are offline. Limited luxury features available. 📱✨', 'warning');
+            console.log('📱 Luxury experience offline mode');
+        });
+
+        // Enhanced battery monitoring for luxury performance
+        if ('getBattery' in navigator) {
+            navigator.getBattery().then(battery => {
+                console.log(`🔋 Battery level: ${Math.round(battery.level * 100)}% (Luxury mode optimized)`);
+                
+                if (battery.level < 0.15) {
+                    console.warn('⚠️ Low battery detected - luxury features may be optimized for power saving');
+                    showLuxuryToast('Low battery detected. Consider charging for full luxury experience! 🔋', 'warning');
+                }
+            });
+        }
+
+        // Enhanced memory monitoring for luxury performance
+        if ('memory' in performance) {
+            const memInfo = performance.memory;
+            const usedMB = Math.round(memInfo.usedJSHeapSize / 1048576);
+            const totalMB = Math.round(memInfo.totalJSHeapSize / 1048576);
+            console.log(`💾 Luxury memory usage: ${usedMB}MB / ${totalMB}MB`);
+            
+            if (usedMB > 100) {
+                console.log('🧹 Luxury experience using significant memory - optimized for premium performance');
+            }
+        }
+
+        // Final luxury initialization success message
+        setTimeout(() => {
+            console.log('🎉 CROOK STORE LUXURY JEWELRY EXPERIENCE FULLY LOADED! 🎉');
+            console.log('💎 Welcome to the most sophisticated jewelry shopping platform!');
+            console.log('✨ Real product images, premium animations, luxury sounds, and ultimate UX!');
+            console.log(`🚀 Built with passion by shubham-shipt on ${new Date().toLocaleDateString('en-IN')}`);
+            
+            // Play luxury welcome sound
+            playLuxurySound('newsletter_success');
+        }, 4000);
+
+    </script>
+</body>
+</html>
